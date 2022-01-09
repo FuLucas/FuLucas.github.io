@@ -1,0 +1,67 @@
+<!DOCTYPE html><html class="appearance-auto" lang="en"><head><meta charset="UTF-8"><title>软件构造笔记五：设计规约</title><meta name="description" content="Shifting eyes and vacancy coming."><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
+<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="
+ 规约的强度及其比较 
+ 如何写出好的规约 
+
+Functions &amp;amp; methods in programming languages返回值类型是否匹配、参数类型是否匹配，在静态类型检查阶段完成
+使用“方法”的客户端，无需了解方法内部（方法体信息隐藏）具体如何工作—“抽象”。
+2 Specification: Programming for communicationAPI：应用程序编程接口
+Documenting in programming“假设”写什么？变量的数据类型定义、final关键字定义了设计决策-“不可改变”、方法假设策略
+为什么写？：自己记不住、别人不懂
+编程时注意两点目标：代码中蕴含的“设计决策”–给编译器读；注释形式的“设计决策”–给自己和别人读。就是依据假设来进行编程，编程.."><meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">FuLucas's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">软件构造笔记五：设计规约</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Functions-amp-methods-in-programming-languages"><span class="toc-text">Functions &amp; methods in programming languages</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Specification-Programming-for-communication"><span class="toc-text">2 Specification: Programming for communication</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Documenting-in-programming"><span class="toc-text">Documenting in programming</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Specification-and-Contract-of-a-method"><span class="toc-text">Specification and Contract (of a method)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Behavioral-equivalence-%E8%A1%8C%E4%B8%BA%E7%AD%89%E4%BB%B7%E6%80%A7"><span class="toc-text"> Behavioral equivalence 行为等价性 </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Specification-structure-pre-condition-and-post-condition"><span class="toc-text">Specification structure: pre-condition and post-condition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Testing-and-verifying-specifications"><span class="toc-text">Testing and verifying specifications</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Designing-specifications"><span class="toc-text"> Designing specifications </span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Classifying-specifications"><span class="toc-text">Classifying specifications</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Diagramming-specifications-%E5%88%B6%E5%9B%BE%E8%A7%84%E7%BA%A6"><span class="toc-text">Diagramming specifications 制图规约</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Designing-good-specifications"><span class="toc-text">Designing good specifications</span></a></li></ol></li></ol></div><div class="column is-9"><header class="my-4"></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">软件构造笔记五：设计规约</h1><time class="has-text-grey" datetime="2021-07-03T08:34:17.000Z">2021-07-03</time><article class="mt-2 post-content"><blockquote>
+<p><font color="red"> <strong>规约的强度及其比较</strong> </font></p>
+<p><font color="red"> <strong>如何写出好的规约</strong> </font></p>
+</blockquote>
+<h1 id="Functions-amp-methods-in-programming-languages"><a href="#Functions-amp-methods-in-programming-languages" class="headerlink" title="Functions &amp; methods in programming languages"></a>Functions &amp; methods in programming languages</h1><p>返回值类型是否匹配、参数类型是否匹配，在静态类型检查阶段完成</p>
+<p>使用“方法”的客户端，无需了解方法内部（方法体信息隐藏）具体如何工作—“抽象”。</p>
+<h1 id="2-Specification-Programming-for-communication"><a href="#2-Specification-Programming-for-communication" class="headerlink" title="2 Specification: Programming for communication"></a>2 Specification: Programming for communication</h1><p>API：应用程序编程接口</p>
+<h2 id="Documenting-in-programming"><a href="#Documenting-in-programming" class="headerlink" title="Documenting in programming"></a>Documenting in programming</h2><p>“假设”写什么？变量的数据类型定义、final关键字定义了设计决策-“不可改变”、方法假设策略</p>
+<p>为什么写？：自己记不住、别人不懂</p>
+<p>编程时注意两点目标：代码中蕴含的“设计决策”–给编译器读；注释形式的“设计决策”–给自己和别人读。就是依据假设来进行编程，编程过程需要考虑编译器和读者两部分人。</p>
+<h2 id="Specification-and-Contract-of-a-method"><a href="#Specification-and-Contract-of-a-method" class="headerlink" title="Specification and Contract (of a method)"></a>Specification and Contract (of a method)</h2><p>Spec给“供需双方”都确定了责任，在调用的时候双方都要遵守：输入输出的数据类型、功能和正确性、性能（只讲能做什么，不讲怎么实现）</p>
+<h2 id="Behavioral-equivalence-行为等价性"><a href="#Behavioral-equivalence-行为等价性" class="headerlink" title=" Behavioral equivalence 行为等价性 "></a><font color="red"> Behavioral equivalence 行为等价性 </font></h2><p>怎么判断是否行为等价性：是否可以用一种实现替代另一种实现（站在客户端视角，前置条件和后置条件）</p>
+<p>根据规约判断行为等价性</p>
+<p><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144614.jpg" alt="BehaviorEquivalence"></p>
+<h2 id="Specification-structure-pre-condition-and-post-condition"><a href="#Specification-structure-pre-condition-and-post-condition" class="headerlink" title="Specification structure: pre-condition and post-condition"></a>Specification structure: pre-condition and post-condition</h2><p>方法规约包含几个条文：</p>
+<ol>
+<li>Precondition 前置条件：对<strong>客户</strong>端的约束，在使用方法时必须满足的条件（参数），indicated by the keyword <code>requires</code></li>
+<li>Postcondition 后置条件：对<strong>开发者</strong>的约束，方法结束时必须满足的条件（返回值），indicated by the keyword <code>effects</code></li>
+<li>Exceptional behavior 异常行为：如果违反先决条件它会做什么。契约–如果前置条件满足了，后置条件必须满足（可以通过抛出异常、修改或不修改对象等来遵循后置条件）；如果前置条件不满足，则方法可以做任何事。</li>
+</ol>
+<p>Java 的静态类型声明是一种规约，可据此进行静态类型检查static checking。方法前的注释也是一种规约，但需人工判定其是否满足。前置条件前置条件写进参数 <code>@param</code>，后置条件结果<code>@return, @throws</code></p>
+<p>方法的规约不应该谈论方法的局部变量或方法类的私有字段。</p>
+<p>除非在后置条件里声明过，否则方法内部<strong>不应该改变输入参数</strong>，应尽量不改变输入参数，尽量不设计mutating的spec，<strong>应该尽量避免使用mutable的对象</strong>，否则就容易引发bugs、降低可变性、复杂化规约。（多个引用指向同一个对象，任意一个引用修改其他的也会引起变化）。</p>
+<h2 id="Testing-and-verifying-specifications"><a href="#Testing-and-verifying-specifications" class="headerlink" title="Testing and verifying specifications"></a>Testing and verifying specifications</h2><p>依据规约进行黑盒测试（不依赖具体实现，但测试必须遵守契约）。</p>
+<h1 id="Designing-specifications"><a href="#Designing-specifications" class="headerlink" title=" Designing specifications "></a><font color="red"> Designing specifications </font></h1><h2 id="Classifying-specifications"><a href="#Classifying-specifications" class="headerlink" title="Classifying specifications"></a>Classifying specifications</h2><p>规约的确定性（输出）、规约的陈述性（输出什么或怎么得到输出）、规约的强度（合法实现的多少）</p>
+<p><font color="red"> <strong>规约强度越高 (Stronger)，则可以用规约强度高的来代替强度弱的，那么如何比较强度？</strong> </font></p>
+<p>更放松的前置条件+更严格的后置条件</p>
+<p>越强的规约，意味着implementor的自由度和责任越重，而client的责任越轻（输入内容约束更少）。</p>
+<p><em>下面是两个可以比较、不能比较规约强弱的实例</em></p>
+<table>
+<thead>
+<tr>
+<th>无法比较</th>
+<th>后者更强</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144631.jpeg"></td>
+<td><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144637.jpg" alt="StrongerVSWeakerSpecs2"></td>
+</tr>
+</tbody></table>
+<h2 id="Diagramming-specifications-制图规约"><a href="#Diagramming-specifications-制图规约" class="headerlink" title="Diagramming specifications 制图规约"></a>Diagramming specifications 制图规约</h2><p>某个具体实现，若满足规约，则落在其范围内；否则，在其之外。程序员可以在规约的范围内自由选择实现方式，客户端无需了解具体实现。<strong>更强的规约，表达为更小的区域</strong></p>
+<ul>
+<li>更强的后置条件意味着实现的自由度更低了-&gt;在图中的面积更小</li>
+<li>更弱的前置条件意味着实现时要处理更多的可能输入，实现的自由度低了-&gt;面积更小</li>
+</ul>
+<p><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144645.jpg" alt="DiagrammingSpecifications"></p>
+<h2 id="Designing-good-specifications"><a href="#Designing-good-specifications" class="headerlink" title="Designing good specifications"></a>Designing good specifications</h2><ol>
+<li><strong>内聚coherent</strong>：Spec描述的功能应单一、简单、易理解</li>
+<li><strong>strong enough</strong>：太弱的spec，client不放心、不敢用 (因为没有给出足够的承诺)。开发者应尽可能考虑各种特殊情况，在post-condition给出处理措施。</li>
+<li><strong>weak enough</strong>：太强的spec，在很多特殊情况下难以达到，给开发者增加了实现的难度。</li>
+<li><strong>use abstract types</strong>：在规约里使用<strong>抽象类型</strong>，可以给方法的实现体与客户端更大的自由度。在Java中这意味着使用接口类型，像 Map、Reader 而不是具体实现类型像 HashMap、FileReader。</li>
+<li><strong>Precondition or postcondition</strong>：是否使用前置条件取决于(1) check的代价；(2) 方法的使用范围。如果只在类的内部使用该方法(private)，那么可以不使用前置条件，在使用该方法的各个位置进行check——责任交给内部client；如果在其他地方使用该方法(public)，那么必须要使用前置条件，若client端不满足则方法抛出异常。</li>
+</ol>
+</article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/2021/07/04/%E8%BD%AF%E4%BB%B6%E6%9E%84%E9%80%A0%E7%AC%94%E8%AE%B0%E5%85%AD/" title="软件构造笔记六：ADT抽象数据类型"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: 软件构造笔记六：ADT抽象数据类型</span></a><a class="button is-default" href="/2021/07/03/%E8%BD%AF%E4%BB%B6%E6%9E%84%E9%80%A0%E7%AC%94%E8%AE%B0%E5%9B%9B/" title="软件构造笔记四：数据类型与类型检验"><span class="has-text-weight-semibold">Next: 软件构造笔记四：数据类型与类型检验</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="Haojen/Claudia-theme-blog" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com//"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/FuLucas"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com//"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com//"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright ©</span><span> FuLucas 2022</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/post.js"></script></body></html>
