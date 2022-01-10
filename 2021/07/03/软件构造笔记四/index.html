@@ -24,7 +24,7 @@ Java 约定：基本数据类型是小写字母开头，对象数据类型是大
 <li>object types 对象数据类型：String, BigInteger</li>
 <li>Java 约定：基本数据类型是小写字母开头，对象数据类型是大写字母开头</li>
 </ul>
-<p><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144329.jpg" alt="PrimitiveObject"></p>
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718144329.jpg" alt="PrimitiveObject"></p>
 <p>对象类型层次结构：root is Object, all non-primitives are objects 继承关系</p>
 <h1 id="2-Static-vs-dynamic-data-type-checking"><a href="#2-Static-vs-dynamic-data-type-checking" class="headerlink" title="2 Static vs. dynamic data type checking"></a>2 Static vs. dynamic data type checking</h1><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 类型转换向下兼容</span></span><br><span class="line"><span class="keyword">double</span> a = <span class="number">2</span>; <span class="comment">// a = 2.0(Implicit)</span></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">18.7</span>; <span class="comment">// ERROR</span></span><br></pre></td></tr></tbody></table></figure>
 
@@ -77,8 +77,8 @@ Java 约定：基本数据类型是小写字母开头，对象数据类型是大
 </tr>
 </thead>
 <tbody><tr>
-<td><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144347.jpg" alt="String"></td>
-<td><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144357.jpg" alt="StringBuilder"></td>
+<td><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718144347.jpg" alt="String"></td>
+<td><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718144357.jpg" alt="StringBuilder"></td>
 </tr>
 <tr>
 <td>String s = “a”;</td>
@@ -90,7 +90,7 @@ Java 约定：基本数据类型是小写字母开头，对象数据类型是大
 </tr>
 </tbody></table>
 <p>当只有一个引用指向该值其实没什么区别，但是多个引用时就体现了区别。</p>
-<p><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144418.jpg" alt="MulitReferences"></p>
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718144418.jpg" alt="MulitReferences"></p>
 <p>Immutable 类型，频繁修改会产生大量的临时拷贝(需要垃圾回收)。</p>
 <p>Mutable 类型最少化拷贝以<strong>提高效率性能</strong>。</p>
 <p>Immutable 类型更“<strong>安全</strong>”。</p>
@@ -101,15 +101,15 @@ Java 约定：基本数据类型是小写字母开头，对象数据类型是大
 </ol>
 <p>安全的使用可变类型：局部变量，不会涉及共享；只有一个引用</p>
 <p>对同一个可变对象如果有多个引用（别名），就非常不安全</p>
-<h1 id="4-Snapshot-diagram-as-a-code-level-run-time-and-moment-view"><a href="#4-Snapshot-diagram-as-a-code-level-run-time-and-moment-view" class="headerlink" title=" 4 Snapshot diagram as a code-level, run-time, and moment view "></a><font color="red"> 4 Snapshot diagram as a code-level, run-time, and moment view </font></h1><p><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144443.jpg" alt="SnapshotRule1"></p>
-<p><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144449.jpg" alt="SnapshotRule2"></p>
-<p><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144455.jpg" alt="SnapshotRule3"></p>
-<p><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144505.jpg" alt="SnapshotRule4"></p>
+<h1 id="4-Snapshot-diagram-as-a-code-level-run-time-and-moment-view"><a href="#4-Snapshot-diagram-as-a-code-level-run-time-and-moment-view" class="headerlink" title=" 4 Snapshot diagram as a code-level, run-time, and moment view "></a><font color="red"> 4 Snapshot diagram as a code-level, run-time, and moment view </font></h1><p><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718144443.jpg" alt="SnapshotRule1"></p>
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718144449.jpg" alt="SnapshotRule2"></p>
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718144455.jpg" alt="SnapshotRule3"></p>
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718144505.jpg" alt="SnapshotRule4"></p>
 <p>An immutable/unreassignable reference to a mutable value：引用是不可变的，但指向的值却可以是可变的，例如：final StringBuilder sb</p>
 <p>A mutable/reassignable reference to an immutable value：可变的引用，也可指向不可变的值，例如：String s</p>
 <h1 id="5-Complex-data-types-Arrays-and-Collections"><a href="#5-Complex-data-types-Arrays-and-Collections" class="headerlink" title="5 Complex data types: Arrays and Collections"></a>5 Complex data types: Arrays and Collections</h1><p>List, Set, Map 都是接口</p>
 <p>Iterator as a <strong>mutable</strong> type 迭代器：next()，hasNext()</p>
-<p><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144432.jpg" alt="Iterator"></p>
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718144432.jpg" alt="Iterator"></p>
 <p>List和迭代器都属于mutable，上图中用迭代器来循环删除某个对象，后面的对象会向前对齐。</p>
 <p><a target="_blank" rel="noopener" href="https://fhdfhd.cn/software-construction/%E8%BD%AF%E4%BB%B6%E6%9E%84%E9%80%A0%E5%AE%9E%E9%AA%8C%E4%BA%8C%E6%80%BB%E7%BB%93/">关于迭代和循环</a></p>
 <h1 id="6-Useful-immutable-types"><a href="#6-Useful-immutable-types" class="headerlink" title="6 Useful immutable types"></a>6 Useful immutable types</h1><ul>

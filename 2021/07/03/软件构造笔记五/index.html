@@ -23,7 +23,7 @@ Documenting in programming“假设”写什么？变量的数据类型定义、
 <h2 id="Specification-and-Contract-of-a-method"><a href="#Specification-and-Contract-of-a-method" class="headerlink" title="Specification and Contract (of a method)"></a>Specification and Contract (of a method)</h2><p>Spec给“供需双方”都确定了责任，在调用的时候双方都要遵守：输入输出的数据类型、功能和正确性、性能（只讲能做什么，不讲怎么实现）</p>
 <h2 id="Behavioral-equivalence-行为等价性"><a href="#Behavioral-equivalence-行为等价性" class="headerlink" title=" Behavioral equivalence 行为等价性 "></a><font color="red"> Behavioral equivalence 行为等价性 </font></h2><p>怎么判断是否行为等价性：是否可以用一种实现替代另一种实现（站在客户端视角，前置条件和后置条件）</p>
 <p>根据规约判断行为等价性</p>
-<p><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144614.jpg" alt="BehaviorEquivalence"></p>
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718144614.jpg" alt="BehaviorEquivalence"></p>
 <h2 id="Specification-structure-pre-condition-and-post-condition"><a href="#Specification-structure-pre-condition-and-post-condition" class="headerlink" title="Specification structure: pre-condition and post-condition"></a>Specification structure: pre-condition and post-condition</h2><p>方法规约包含几个条文：</p>
 <ol>
 <li>Precondition 前置条件：对<strong>客户</strong>端的约束，在使用方法时必须满足的条件（参数），indicated by the keyword <code>requires</code></li>
@@ -47,8 +47,8 @@ Documenting in programming“假设”写什么？变量的数据类型定义、
 </tr>
 </thead>
 <tbody><tr>
-<td><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144631.jpeg"></td>
-<td><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144637.jpg" alt="StrongerVSWeakerSpecs2"></td>
+<td><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718144631.jpeg"></td>
+<td><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718144637.jpg" alt="StrongerVSWeakerSpecs2"></td>
 </tr>
 </tbody></table>
 <h2 id="Diagramming-specifications-制图规约"><a href="#Diagramming-specifications-制图规约" class="headerlink" title="Diagramming specifications 制图规约"></a>Diagramming specifications 制图规约</h2><p>某个具体实现，若满足规约，则落在其范围内；否则，在其之外。程序员可以在规约的范围内自由选择实现方式，客户端无需了解具体实现。<strong>更强的规约，表达为更小的区域</strong></p>
@@ -56,7 +56,7 @@ Documenting in programming“假设”写什么？变量的数据类型定义、
 <li>更强的后置条件意味着实现的自由度更低了-&gt;在图中的面积更小</li>
 <li>更弱的前置条件意味着实现时要处理更多的可能输入，实现的自由度低了-&gt;面积更小</li>
 </ul>
-<p><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144645.jpg" alt="DiagrammingSpecifications"></p>
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718144645.jpg" alt="DiagrammingSpecifications"></p>
 <h2 id="Designing-good-specifications"><a href="#Designing-good-specifications" class="headerlink" title="Designing good specifications"></a>Designing good specifications</h2><ol>
 <li><strong>内聚coherent</strong>：Spec描述的功能应单一、简单、易理解</li>
 <li><strong>strong enough</strong>：太弱的spec，client不放心、不敢用 (因为没有给出足够的承诺)。开发者应尽可能考虑各种特殊情况，在post-condition给出处理措施。</li>

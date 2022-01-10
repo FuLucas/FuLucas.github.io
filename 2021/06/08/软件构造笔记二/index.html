@@ -39,7 +39,7 @@ residual defect rates 残留缺陷率（bugs left over after the software has sh
 <li>System testing 系统测试：完全集成的系统</li>
 <li>Regression testing 回归测试：发现错误，改正后，前面的重新测试（自动化）</li>
 </ul>
-<p><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718143914.jpg" alt="TestLevel"></p>
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718143914.jpg" alt="TestLevel"></p>
 <h2 id="Static-vs-Dynamic-Testing"><a href="#Static-vs-Dynamic-Testing" class="headerlink" title="Static vs. Dynamic Testing"></a>Static vs. Dynamic Testing</h2><ol>
 <li><strong>静态测试 Static testing</strong>：without actually executing programs, 靠眼睛看，隐式的静态程序分析，review、walkthroughs、inspections</li>
 <li><strong>动态测试 Dynamic testing</strong>：给定测试用例执行</li>
@@ -52,7 +52,7 @@ residual defect rates 残留缺陷率（bugs left over after the software has sh
 <li><strong>白盒测试</strong>：对程序<strong>内部代码</strong>结构的测试，程序执行情况，by seeing the source code</li>
 <li><strong>黑盒测试</strong>：对程序<strong>外部表现</strong>出来的行为的测试。just input and output，程序完成之前可以确定，用于<strong>检查代码的功能，不关心内部实现细节</strong></li>
 </ol>
-<p><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718143931.jpg" alt="WhiteVSBlack-box-testing"></p>
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718143931.jpg" alt="WhiteVSBlack-box-testing"></p>
 <hr>
 <h1 id="2-Test-Case"><a href="#2-Test-Case" class="headerlink" title="2. Test Case"></a>2. Test Case</h1><p><strong>测试用例：输入＋执行条件+期望结果</strong></p>
 <p><em>E.g.</em> test cases: {2,4}, {0,0}, {-2,4} for program y=x^2</p>
@@ -79,24 +79,24 @@ residual defect rates 残留缺陷率（bugs left over after the software has sh
 <li>确定了一组数值：one valid and one invalid</li>
 <li>输入数据是Boolean：one valid and one invalid</li>
 </ul>
-<p><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718143948.jpg" alt="EquivalencPartitioningExample"></p>
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718143948.jpg" alt="EquivalencPartitioningExample"></p>
 <h2 id="Include-Boundaries-in-the-Partition"><a href="#Include-Boundaries-in-the-Partition" class="headerlink" title="Include Boundaries in the Partition"></a>Include Boundaries in the Partition</h2><p>Boundary Value Analysis (BVA) 边界测试</p>
 <p>大量的错误发生在输入域的“边界”而非中央</p>
 <p>边界值分析方法是对等价类划分方法的补充</p>
 <p><strong>在等价类划分时，将边界作为等价类之一加入考虑</strong></p>
-<h2 id="笛卡尔积：全覆盖-覆盖每个取值：最少1次即可"><a href="#笛卡尔积：全覆盖-覆盖每个取值：最少1次即可" class="headerlink" title="笛卡尔积：全覆盖/覆盖每个取值：最少1次即可"></a>笛卡尔积：全覆盖/覆盖每个取值：最少1次即可</h2><p><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144003.jpg" alt="BVAExample"></p>
+<h2 id="笛卡尔积：全覆盖-覆盖每个取值：最少1次即可"><a href="#笛卡尔积：全覆盖-覆盖每个取值：最少1次即可" class="headerlink" title="笛卡尔积：全覆盖/覆盖每个取值：最少1次即可"></a>笛卡尔积：全覆盖/覆盖每个取值：最少1次即可</h2><p><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718144003.jpg" alt="BVAExample"></p>
 <p>以此为例：</p>
 <ol>
 <li><strong>笛卡尔积全覆盖</strong>：3 × 5 × 5 = 75 test cases, but some combinations are impossible, such as <strong>a&lt;b, a=0, b=0</strong>（多维度多取值，组合每个维度都要有取值，但是并非所有组合情况都可能）</li>
 <li><strong>Cover each part 覆盖每个取值最少1次即可</strong>：每个维度的每个取值至少被1个测试用例覆盖一次即可，如下。</li>
 </ol>
-<p><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144010.jpg" alt="BVAExampleAnswer"></p>
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718144010.jpg" alt="BVAExampleAnswer"></p>
 <p>笛卡尔积全覆盖测试完备，但用例数量多，测试代价高；后者方法测试用例少，代价低，但测试覆盖度未必高。Often we strike some compromise between these two extremes，两个极端之间做出一些<strong>妥协</strong>（出于谨慎、受白盒测试和代码覆盖工具的影响）。</p>
 <h1 id="7-White-box-Testing"><a href="#7-White-box-Testing" class="headerlink" title="7 White-box Testing"></a>7 White-box Testing</h1><p><strong>白盒测试要考虑内部实现细节</strong>，开发人员去实现，<strong>尽量走全代码</strong>。</p>
 <p>根据<strong>程序执行路径</strong>设计测试用例，只测试实现功能（不能测试缺失功能），不是根据需求选择的测试用例。</p>
 <p>白盒测试可以在 unit, integration and system levels 执行，一般较早执行。</p>
-<p><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144020.jpg" alt="BlackBoxTest"></p>
-<p><img src="https://github.com/FuLucas/cloudimg/tree/main/2022/20210718144027.jpeg"></p>
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718144020.jpg" alt="BlackBoxTest"></p>
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2021/20210718144027.jpeg"></p>
 <p>独立/基本路径测试：对程序所有执行路径进行等价类划分，找出有代表性的最简单的路径（例如循环只需执行1次），设计测试用例使每一条<strong>基本路径被至少覆盖1次</strong>。</p>
 <h1 id="8-Coverage-of-Testing"><a href="#8-Coverage-of-Testing" class="headerlink" title="8 Coverage of Testing"></a>8 Coverage of Testing</h1><p>Code coverage 代码覆盖度：已有的测试用例有多大程度覆盖了被测程序（百分比衡量覆盖度）</p>
 <p>代码覆盖度越低，测试越不充分；但要做到很高的代码覆盖度，需要更多的测试用例，测试代价高。</p>
