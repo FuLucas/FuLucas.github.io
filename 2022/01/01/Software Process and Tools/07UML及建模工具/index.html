@@ -1,0 +1,701 @@
+<!DOCTYPE html><html class="appearance-auto" lang="en"><head><meta charset="UTF-8"><title>软件过程与工具——UML及建模工具</title><meta name="description" content="Shifting eyes and vacancy coming."><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
+<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="UML及建模工具一. UML简介1. 模型及其作用
+模型就是现实的简单化
+
+模型的目的或用途：模型是为了更好地理解正在开发的系统：系统可视化、详细说明系统的结构或行为（e.g. 静态/动态结构、行为  时序描写）、指导构造系统的模板、决策进行文档化、构建物理实体前先测试、与客户交流、降低复杂度。
+
+面向对象的建模：软件系统用对象（类）作为其构造单元（块）；class属性（静态）、方法（动态）
+
+从问题空间或解空间的词汇中找出对象
+类是对具有共同性质的一组对象的描述
+
+
+
+2. UML介绍UML——Unified Modeling Language 统一建模语言
+UML 是一种对软件系统的制作过程/产出物进行下述工作的描述语言，这些工作包括：可视化（visualizing）、详述 （specifying）、构.."><meta name="generator" content="Hexo 6.0.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">FuLucas's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">软件过程与工具——UML及建模工具</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3><h3 class="is-inline-block"><a href="/resume">resume</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3><h3 class="is-inline-block"><a href="/resume">resume</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#UML%E5%8F%8A%E5%BB%BA%E6%A8%A1%E5%B7%A5%E5%85%B7"><span class="toc-text">UML及建模工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-UML%E7%AE%80%E4%BB%8B"><span class="toc-text">一. UML简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%A8%A1%E5%9E%8B%E5%8F%8A%E5%85%B6%E4%BD%9C%E7%94%A8"><span class="toc-text">1. 模型及其作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-UML%E4%BB%8B%E7%BB%8D"><span class="toc-text">2. UML介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-UML%E5%B7%A5%E5%85%B7"><span class="toc-text">3. UML工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%A7%86%E5%9B%BE%EF%BC%88Views%EF%BC%89"><span class="toc-text">4. 视图（Views）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E7%94%A8%E4%BE%8B%E5%9B%BE"><span class="toc-text">二. 用例图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%94%A8%E4%BE%8B%E5%9B%BE%E7%AE%80%E4%BB%8B"><span class="toc-text">1. 用例图简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%94%A8%E4%BE%8B%E5%9B%BE%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-text">2. 用例图的组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%8F%82%E4%B8%8E%E8%80%85%E3%80%81%E7%94%A8%E4%BE%8B%E3%80%81%E4%BA%8B%E4%BB%B6%E6%B5%81"><span class="toc-text">3. 参与者、用例、事件流</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-%E5%8F%82%E4%B8%8E%E8%80%85%EF%BC%88Actor%EF%BC%89"><span class="toc-text">3.1 参与者（Actor）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-%E7%94%A8%E4%BE%8B%E4%B8%8E%E4%BA%8B%E4%BB%B6%E6%B5%81"><span class="toc-text">3.2 用例与事件流</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%94%A8%E4%BE%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">4. 用例间的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%AE%9E%E4%BE%8B%EF%BC%9A%E5%9B%BE%E4%B9%A6%E9%A6%86%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%94%A8%E4%BE%8B%E5%9B%BE%EF%BC%88%E7%9C%8BPPT%EF%BC%89"><span class="toc-text">5. 实例：图书馆管理系统的用例图（看PPT）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E8%BE%B9%E7%95%8C"><span class="toc-text">6. 边界</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E7%94%A8%E4%BE%8B%E7%9A%84%E7%B2%92%E5%BA%A6"><span class="toc-text">7. 用例的粒度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E7%94%A8%E4%BE%8B%E7%9A%84%E5%B1%82%E6%AC%A1"><span class="toc-text">8. 用例的层次</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E4%B8%9A%E5%8A%A1%E5%BB%BA%E6%A8%A1"><span class="toc-text">9. 业务建模</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E6%B4%BB%E5%8A%A8%E5%9B%BE"><span class="toc-text">三. 活动图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%B4%BB%E5%8A%A8%E5%9B%BE%E7%AE%80%E4%BB%8B"><span class="toc-text">1. 活动图简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%B4%BB%E5%8A%A8%E5%9B%BE%E5%85%83%E7%B4%A0"><span class="toc-text">2. 活动图元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%9B%BE%E4%B9%A6%E9%A6%86%E6%B4%BB%E5%8A%A8%E5%9B%BE"><span class="toc-text">3. 图书馆活动图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%B4%BB%E5%8A%A8%E5%9B%BE%E5%92%8C%E7%8A%B6%E6%80%81%E5%9B%BE%E5%8C%BA%E5%88%AB"><span class="toc-text">4. 活动图和状态图区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%B4%BB%E5%8A%A8%E5%9B%BE%E5%92%8C%E6%B5%81%E7%A8%8B%E5%9B%BE%E5%8C%BA%E5%88%AB"><span class="toc-text">5. 活动图和流程图区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-%E7%B1%BB%E5%9B%BE-%E5%AF%B9%E8%B1%A1%E5%9B%BE"><span class="toc-text">四. 类图&#x2F;对象图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%B1%BB%E5%9B%BE%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">1. 类图的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%B1%BB%E5%9B%BE%E7%9A%84%E5%85%83%E7%B4%A0"><span class="toc-text">2. 类图的元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%B1%BB"><span class="toc-text">3. 类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%8E%A5%E5%8F%A3"><span class="toc-text">4. 接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">5. 类之间的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%88%86%E6%9E%90%E9%98%B6%E6%AE%B5%E7%9A%84%E7%B1%BB%E5%9B%BE"><span class="toc-text">6. 分析阶段的类图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E8%AE%BE%E8%AE%A1%E9%98%B6%E6%AE%B5%E7%9A%84%E7%B1%BB%E5%9B%BE"><span class="toc-text">7. 设计阶段的类图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E5%AE%9E%E4%BE%8B%EF%BC%9A%E5%9B%BE%E4%B9%A6%E9%A6%86%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%B1%BB%E5%9B%BE"><span class="toc-text">8. 实例：图书馆管理系统的类图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94-%E4%BA%A4%E4%BA%92%E5%9B%BE%EF%BC%88%E6%97%B6%E5%BA%8F%E5%9B%BE%EF%BC%89"><span class="toc-text">五. 交互图（时序图）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%A4%E4%BA%92%E5%9B%BE"><span class="toc-text">1. 什么是交互图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%BA%8F%E5%88%97%E5%9B%BE%E7%AE%80%E4%BB%8B"><span class="toc-text">2. 序列图简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%BA%8F%E5%88%97%E5%9B%BE%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-text">3. 序列图的组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%94%A8%E4%BE%8B%E5%9B%BE%E3%80%81%E7%B1%BB%E5%9B%BE%E3%80%81%E5%BA%8F%E5%88%97%E5%9B%BE%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">4. 用例图、类图、序列图之间的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-BCE%E6%A8%A1%E5%BC%8F%EF%BC%9F%EF%BC%9F%EF%BC%9F%EF%BC%9F%EF%BC%9F"><span class="toc-text">5. BCE模式？？？？？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%AE%9E%E4%BE%8B%EF%BC%9A%E5%9B%BE%E4%B9%A6%E9%A6%86%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%8F%E5%88%97%E5%9B%BE"><span class="toc-text">6. 实例：图书馆管理系统的序列图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-Frame"><span class="toc-text">7. Frame</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E7%BB%84%E5%90%88%E7%89%87%E6%AE%B5"><span class="toc-text">8. 组合片段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E5%8D%8F%E4%BD%9C%E5%9B%BE"><span class="toc-text">9. 协作图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD-%E7%8A%B6%E6%80%81%E5%9B%BE"><span class="toc-text">六. 状态图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83-%E7%BB%84%E4%BB%B6%E5%9B%BE-%E9%83%A8%E7%BD%B2%E5%9B%BE%EF%BC%88%E7%95%A5%EF%BC%89"><span class="toc-text">七. 组件图+部署图（略）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BB%84%E4%BB%B6%E5%9B%BE"><span class="toc-text">1. 组件图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%83%A8%E7%BD%B2%E5%9B%BE%EF%BC%88%E5%AE%9E%E6%96%BD%E5%9B%BE%EF%BC%89"><span class="toc-text">2. 部署图（实施图）</span></a></li></ol></li></ol></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/HIT%20Software%20Process%20and%20Tools"><i class="tag post-item-tag">HIT Software Process and Tools</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">软件过程与工具——UML及建模工具</h1><time class="has-text-grey" datetime="2022-01-01T14:38:38.000Z">2022-01-01</time><article class="mt-2 post-content"><h1 id="UML及建模工具"><a href="#UML及建模工具" class="headerlink" title="UML及建模工具"></a>UML及建模工具</h1><h2 id="一-UML简介"><a href="#一-UML简介" class="headerlink" title="一. UML简介"></a>一. UML简介</h2><h3 id="1-模型及其作用"><a href="#1-模型及其作用" class="headerlink" title="1. 模型及其作用"></a>1. 模型及其作用</h3><ul>
+<li><p><em><strong>模型就是现实的简单化</strong></em></p>
+</li>
+<li><p><strong>模型的目的或用途：</strong>模型是为了更好地理解正在开发的系统：系统<strong>可视化</strong>、详细说明系统的<strong>结构或行为</strong>（e.g. 静态/动态结构、行为 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.054ex" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.242ex" role="img" focusable="false" viewBox="0 -525 1000 549"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="21D2" d="M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z"></path></g></g></g></svg></mjx-container> 时序描写）、指导构造系统的<strong>模板</strong>、决策进行<strong>文档化</strong>、构建物理实体前先测试、与客户交流、降低<strong>复杂度</strong>。</p>
+</li>
+<li><p><strong>面向对象的建模：</strong>软件系统用<strong>对象（类）</strong>作为其构造单元（块）；class属性（静态）、方法（动态）</p>
+<ul>
+<li>从<strong>问题空间或解空间</strong>的<strong>词汇</strong>中找出<strong>对象</strong></li>
+<li>类是对具有共同性质的一组对象的描述</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-UML介绍"><a href="#2-UML介绍" class="headerlink" title="2. UML介绍"></a>2. UML介绍</h3><p><em><strong>UML——Unified Modeling Language 统一建模语言</strong></em></p>
+<p>UML 是一种对软件系统的制作过程/产出物进行下述工作的描述语言，这些工作包括：<strong>可视化（visualizing）、详述 （specifying）、构造 （constructing）、文档化（documenting）</strong>。</p>
+<p>统一标准：UML已成为<strong>面向对象的标准化</strong>的统一的建模语言</p>
+<p><strong>UML与代码的关系</strong>：编码是实现一个系统，UML是对一个模型建立模型，一些工具（比如Rational Rose）可以根据UML建立的模型来产生java、C++或其他程序语言代码框架。</p>
+<p><strong>UML的构成：</strong>视图（Views）、图（Diagrams）、模型元素、通用机制</p>
+<h3 id="3-UML工具"><a href="#3-UML工具" class="headerlink" title="3. UML工具"></a>3. UML工具</h3><p>Microsoft Visio、IBM Rational Rose、I-Logix、POPKIN、ORACLE、Borland、StarUML、</p>
+<h3 id="4-视图（Views）"><a href="#4-视图（Views）" class="headerlink" title="4. 视图（Views）"></a>4. 视图（Views）</h3><p>三视图</p>
+<p><em><strong>视图</strong></em>是表达系统某一方面特征的 UML 建模元素的子集，它是由一个或者多个图组成的<strong>对系统某个角度的抽象</strong>。</p>
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223120418441.png" alt="image-20211223120418441"></p>
+<ul>
+<li><em><strong>Use Case View（用例视图）</strong></em><ul>
+<li>用途：描述系统应该具备的功能，被称为参与者（执行者）的<em><strong>外部用户所能观察到的功能</strong></em></li>
+<li>其他几个视图的核心，直接驱动其他视图的开发</li>
+<li>包含UML图：<em><strong>用例图</strong></em></li>
+<li>使用者：分析人员</li>
+</ul>
+</li>
+<li><em><strong>Logical View（逻辑视图）</strong></em><ul>
+<li>用途：描述用例图中提出的<em><strong>系统功能的实现</strong></em></li>
+<li>包含UML图：<em><strong>静态结构（类图、对象图），动态协作关系（状态图、时序图、协作图、活动图）</strong></em></li>
+<li>使用者：分析人员、设计人员、开发人员</li>
+</ul>
+</li>
+<li><em><strong>Process View（进程视图）</strong></em><ul>
+<li>用途：考虑<em><strong>资源</strong></em>的有效利用、<em><strong>代码的并行执行</strong></em>以及系统环境中<em><strong>异步事件</strong></em>的处理</li>
+<li>解决在并发系统中存在的<strong>通信和同步问题</strong></li>
+<li>包含UML图：<em><strong>状态图、协作图、组件图、活动图</strong></em></li>
+<li>使用者：开发人员、系统集成人员</li>
+</ul>
+</li>
+<li><em><strong>Implementation View（实现视图）</strong></em><ul>
+<li>用途：描述系统的<em><strong>实现模块</strong></em>以及它们之间的<em><strong>依赖关系</strong></em></li>
+<li>包含UML图：<em><strong>组件图</strong></em></li>
+<li>使用者：开发人员</li>
+</ul>
+</li>
+<li><em><strong>Deployment View（部署视图）</strong></em><ul>
+<li>用途：显示系统的<em><strong>物理部署（物理设备）</strong></em>，并描述位于节点实例上的运行组件实例的部署情况</li>
+<li>包含UML图：<em><strong>部署图</strong></em></li>
+<li>使用者：开发人员、系统集成人员、测试人员</li>
+</ul>
+</li>
+</ul>
+<p>***<u>UML中的模型图</u>***：类图（class diagram）、对象图（object diagram）、用例图（use case diagram）、时序图（sequence diagram）、协作图（collaboration diagram）、状态图（statechart diagram）、活动图（activity diagram）、组件图（component diagram）、部署图（deployment diagram）</p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223125337619.png" alt="image-20211223125337619" style="zoom:80%;">
+
+
+
+<p>UML中的关系：<strong>关联、依赖、泛化、实现、聚合</strong></p>
+<ul>
+<li><em><strong>关联</strong></em><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223130359738.png" alt="image-20211223130359738"></li>
+<li><em><strong>依赖</strong></em> <img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223130432036.png" alt="image-20211223130432036"></li>
+<li><em><strong>泛化</strong></em> <img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223130445435.png" alt="image-20211223130445435"></li>
+<li><em><strong>实现</strong></em> <img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223130457344.png" alt="image-20211223130457344"></li>
+<li><em><strong>聚合/组合</strong></em> <img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223130509537.png" alt="image-20211223130509537"></li>
+</ul>
+<p>UML 模型中最<strong>基本的结构化事物</strong>，包括：<em><strong>类、接口、协作、用例、活动类、组件、节点</strong></em></p>
+<ul>
+<li><em><strong>类</strong></em><ul>
+<li>对相同属性、方法、关系和语义的对象的抽象</li>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223125737888.png" alt="image-20211223125737888" style="zoom:50%;"></li>
+</ul>
+</li>
+<li><em><strong>接口</strong></em><ul>
+<li><strong>类或组件</strong>提供特定服务的一组操作的集合</li>
+<li>描述了类或组件的<strong>对外可见的动作</strong></li>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223125924946.png" alt="image-20211223125924946" style="zoom: 33%;"></li>
+</ul>
+</li>
+<li><em><strong>协作</strong></em><ul>
+<li>定义了交互操作</li>
+<li>代表构成系统的模式的实现</li>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223130014686.png" alt="image-20211223130014686" style="zoom:50%;"></li>
+</ul>
+</li>
+<li><em><strong>用例</strong></em><ul>
+<li>描述系统对一个特定角色执行一系列动作</li>
+<li>组织动作事件</li>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223130100994.png" alt="image-20211223130100994" style="zoom:50%;"></li>
+</ul>
+</li>
+<li><em><strong>活动类（对象）</strong></em><ul>
+<li>有一个或多个进程或线程的类</li>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223130146423.png" alt="image-20211223130146423" style="zoom:50%;"></li>
+</ul>
+</li>
+<li><em><strong>组件</strong></em><ul>
+<li>实现了物理上可替换的系统部分</li>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223130219987.png" alt="image-20211223130219987" style="zoom:50%;"></li>
+</ul>
+</li>
+<li><em><strong>节点</strong></em><ul>
+<li>在运行时存在的一个物理元素</li>
+<li>代表一个可计算的资源</li>
+<li>通常占用一些内存和具有处理能力</li>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223130320177.png" alt="image-20211223130320177" style="zoom:67%;"></li>
+</ul>
+</li>
+</ul>
+<h2 id="二-用例图"><a href="#二-用例图" class="headerlink" title="二. 用例图"></a>二. 用例图</h2><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/5CD16393087937A75137A308A25D4B97.png" alt="img" style="zoom: 50%;">
+
+<h3 id="1-用例图简介"><a href="#1-用例图简介" class="headerlink" title="1. 用例图简介"></a>1. 用例图简介</h3><p>用例图应用在软件开发的<strong>需求分析阶段</strong>，描述了系统的功能以及如何使用一个系统</p>
+<p>用例图显示谁将是相关的<em><strong>用户</strong></em>、用户希望<em><strong>系统提供什么服务</strong></em>以及<em><strong>用户需要为系统提供的服务</strong></em></p>
+<p><em><strong><u>用例图类型</u></strong></em></p>
+<ul>
+<li><strong>业务用例图</strong> <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.054ex" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.242ex" role="img" focusable="false" viewBox="0 -525 1000 549"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="21D2" d="M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z"></path></g></g></g></svg></mjx-container> 边界是组织——用例是期望、服务</li>
+<li><strong>系统用例图</strong>  <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.054ex" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.242ex" role="img" focusable="false" viewBox="0 -525 1000 549"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="21D2" d="M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z"></path></g></g></g></svg></mjx-container> 边界是系统/子系统——用例是子系统、模块、功能</li>
+</ul>
+<h3 id="2-用例图的组成"><a href="#2-用例图的组成" class="headerlink" title="2. 用例图的组成"></a>2. 用例图的组成</h3><p>用例图主要包含以下 6 个元素：<strong>参与者（Actor）、用例（Use Case）、关联关系（Association）、包含关系（Include）、扩展关系（Extend）、泛化关系（Generalization）</strong></p>
+<h3 id="3-参与者、用例、事件流"><a href="#3-参与者、用例、事件流" class="headerlink" title="3. 参与者、用例、事件流"></a>3. 参与者、用例、事件流</h3><h4 id="3-1-参与者（Actor）"><a href="#3-1-参与者（Actor）" class="headerlink" title="3.1 参与者（Actor）"></a>3.1 参与者（Actor）</h4><p><em><strong><u>参与者的概念</u><em><strong>：参与者是</strong></em>系统外部的一个实体</strong></em>，参与用例的执行过程，参与者由参与用例时所担当的<em><strong>角色表示</strong></em>，每个参与者可以参加<strong>一个或多个用例</strong></p>
+<p><em><strong>参与者的种类：</strong></em>参与者可以是系统<strong>用户</strong>（真实的人，即user，<strong>最常见</strong>的参与者，存在于每一个系统，按角色命名）、<strong>时间代理人（timer）</strong>、交互的<strong>其他系统</strong>（外部程序），其他如硬件设备、外部设备和外部数据库等。</p>
+<p><strong>总之参与者不一定是人</strong> ，但参与者由”<em><strong>角色</strong></em>“表示<strong>而不是特定的人或事</strong>。</p>
+<p><em><strong><u>先定系统边界</u></strong></em> <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.054ex" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.242ex" role="img" focusable="false" viewBox="0 -525 1000 549"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="21D2" d="M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z"></path></g></g></g></svg></mjx-container> 寻找系统参与者，参与者对系统而言总是外部的</p>
+<p>参与者可以<strong>直接或间接</strong>地同系统交互或使用系统提供的服务以完成某件事件</p>
+<p>一个人或事物在与系统发生交互时，可以<strong>扮演多个角色</strong></p>
+<p><em><strong>启动者和支持者（协作者）</strong></em></p>
+<ul>
+<li><strong>启动者是用例的主要服务对象</strong></li>
+<li><strong>另一类是扮演支持者角色的参与者</strong></li>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223134646388.png" alt="image-20211223134646388" style="zoom: 80%;"></li>
+</ul>
+<p>参与者之间可以具有<em><strong>泛化关系</strong></em>，使用泛化关系来描述多个参与者之间的<strong>公共行为</strong></p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223134750808.png" alt="image-20211223134750808" style="zoom: 67%;">
+
+<h4 id="3-2-用例与事件流"><a href="#3-2-用例与事件流" class="headerlink" title="3.2 用例与事件流"></a>3.2 用例与事件流</h4><p><em><strong>用例的概念</strong></em>：用例是<strong>外部可见的系统功能单元</strong>，不揭露系统内部构造的前提下定义连贯的行为，不是需求或功能的说明</p>
+<p>用例的表示：简单名（simple name）<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223141700254.png" alt="image-20211223141700254" style="zoom:50%;">、路径名（Path name)<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223141709224.png" alt="image-20211223141709224" style="zoom:50%;"></p>
+<p><strong>用例分析处于系统的需求分析阶段，这个阶段应该尽量避免考虑系统的细节问题</strong></p>
+<p><strong>实际建立系统，则需要更加具体的细节，这些细节写在用例对应的事件流文件中</strong></p>
+<p>值得注意的是事件流描述的也是系统<em><strong>”做什么“</strong></em>，而不是”怎么做“</p>
+<p><em><strong>事件流文件组成</strong></em>（常见的事件流描述方法是一个表格）</p>
+<ul>
+<li>简要说明（用例相关、参与者）</li>
+<li>前提条件</li>
+<li>后置条件</li>
+<li>事件流程（主事件流、其他事件流、错误流）</li>
+</ul>
+<h3 id="4-用例间的关系"><a href="#4-用例间的关系" class="headerlink" title="4. 用例间的关系"></a>4. 用例间的关系</h3><ul>
+<li><em><strong>关联关系：</strong></em>参与者与用例之间的关系<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223142528579.png" alt="image-20211223142528579" style="zoom: 50%;"></li>
+</ul>
+</li>
+<li><em><strong>包含关系：</strong></em>用例之间，一个用例简单地包含其他用例具有的行为<ul>
+<li>包含关系把几个用例的<strong>公共部分</strong>分离成一个单独的被包含用例；一个用例的功能太多，用包含关系建模成两个以上的用例，<strong>降低用例的复杂度</strong></li>
+<li>被包含用例称为<strong>提供者用例</strong>，包含用例称为<strong>客户用例</strong></li>
+<li><em><strong>客户用例执行，则提供者用例必须执行</strong></em></li>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223142907237.png" alt="image-20211223142907237" style="zoom:50%;"></li>
+</ul>
+</li>
+<li><em><strong>扩展关系：</strong></em>基础用例的增量扩展<ul>
+<li>把新的行为加到已有的用例中去</li>
+<li>基础用例提供<strong>扩展点</strong>以添加新的行为，扩展用例插入到基础用例的扩展点上</li>
+<li><em><strong>基础用例被执行，一般不会涉及扩展用例；只有特定的条件发生，扩展用例才被执行</strong></em>，与包含关系区分</li>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223143320145.png" alt="image-20211223143320145" style="zoom:50%;"></li>
+</ul>
+</li>
+<li><em><strong>泛化关系：</strong></em>一般与特殊的关系<ul>
+<li>父用例可以被特别地列举为一个或多个子用例，子用例表示父用例的特殊形式</li>
+<li>子用例从父用例处继承行为和属性，还可以添加行为或覆盖、改变继承的行为</li>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223143559930.png" alt="image-20211223143559930" style="zoom:50%;"></li>
+</ul>
+</li>
+</ul>
+<h3 id="5-实例：图书馆管理系统的用例图（看PPT）"><a href="#5-实例：图书馆管理系统的用例图（看PPT）" class="headerlink" title="5. 实例：图书馆管理系统的用例图（看PPT）"></a>5. 实例：图书馆管理系统的用例图（看PPT）</h3><ul>
+<li><p><em><strong>确定系统涉及的总体信息</strong></em></p>
+</li>
+<li><p><em><strong>确定系统的参与者</strong></em></p>
+</li>
+<li><p><em><strong>确定系统的用例</strong></em>（包括不同参与者的不同用例）</p>
+</li>
+<li><p><em><strong>图书馆管理系统的用例图</strong></em></p>
+</li>
+</ul>
+<h3 id="6-边界"><a href="#6-边界" class="headerlink" title="6. 边界"></a>6. 边界</h3><ul>
+<li>正确用例图<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223144315863.png" alt="image-20211223144315863" style="zoom: 67%;"></li>
+</ul>
+</li>
+<li>错误用例图<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223144342090.png" alt="image-20211223144342090" style="zoom: 67%;"></li>
+</ul>
+</li>
+</ul>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223144452473.png" alt="image-20211223144452473" style="zoom: 67%;">
+
+<h3 id="7-用例的粒度"><a href="#7-用例的粒度" class="headerlink" title="7. 用例的粒度"></a>7. 用例的粒度</h3><p>是用例吗？常有<strong>把步骤当作用例的错误</strong>：</p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223144715314.png" alt="image-20211223144715314" style="zoom:67%;">
+
+<p>用例能多能少</p>
+<h3 id="8-用例的层次"><a href="#8-用例的层次" class="headerlink" title="8. 用例的层次"></a>8. 用例的层次</h3><p>？？？？？《include》关系</p>
+<h3 id="9-业务建模"><a href="#9-业务建模" class="headerlink" title="9. 业务建模"></a>9. 业务建模</h3><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223145114938.png" alt="image-20211223145114938" style="zoom:80%;">
+
+<h2 id="三-活动图"><a href="#三-活动图" class="headerlink" title="三. 活动图"></a>三. 活动图</h2><h3 id="1-活动图简介"><a href="#1-活动图简介" class="headerlink" title="1. 活动图简介"></a>1. 活动图简介</h3><p>活动图是UML用于<em><strong>系统动态行为模型</strong></em>工具</p>
+<p>描述活动顺序，***<u>从一个活动到另一个活动的控制流</u>***</p>
+<p>本质上是流程图</p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223145831401.png" alt="image-20211223145831401" style="zoom:80%;">
+
+<h3 id="2-活动图元素"><a href="#2-活动图元素" class="headerlink" title="2. 活动图元素"></a>2. 活动图元素</h3><ul>
+<li><em><strong>动作状态：</strong></em>原子的、瞬时的、不可分解、不可中断<ul>
+<li>可以有入转换（动作流、对象流），至少一条出转换</li>
+<li>不能有入口动作和出口动作，更不能有内部转移</li>
+</ul>
+</li>
+<li><em><strong>活动状态：</strong></em>非原子、可分解（分解为子活动或动作状态）<ul>
+<li>活动状态的<strong>内部活动</strong>可以用<strong>另一个活动图</strong>来表示</li>
+<li>活动状态可以有入口动作和出口动作，也可以有内部转移</li>
+</ul>
+</li>
+</ul>
+<p><strong>动作状态是活动状态的一个特例，如果某个活动状态只包括一个动作，那么它就是一个动作状态</strong></p>
+<p>动作状态图和活动状态图都用平滑的圆角矩形表示</p>
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223150943098.png" alt="image-20211223150943098" style="zoom:50%;"><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223150950213.png" alt="image-20211223150950213" style="zoom:50%;"></p>
+<ul>
+<li><em><strong>开始点</strong></em><ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223151243264.png" alt="image-20211223151243264" style="zoom: 67%;"></li>
+</ul>
+</li>
+<li><em><strong>结束点</strong></em><ul>
+<li>整个活动结束<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223151255057.png" alt="image-20211223151255057" style="zoom:67%;"></li>
+</ul>
+</li>
+<li>子流程的结束<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223151302524.png" alt="image-20211223151302524" style="zoom:67%;"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em><strong>分支与合并</strong></em><ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223151329402.png" alt="image-20211223151329402" style="zoom: 67%;"></li>
+</ul>
+</li>
+<li><em><strong>分叉与汇合</strong></em><ul>
+<li>分叉用将控制流分为<strong>两个或者多个并发运行</strong>的分支</li>
+<li>汇合用于<strong>同步</strong>这些并发分支，以达到<strong>共同完成一项事务</strong>的目的</li>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223151447513.png" alt="image-20211223151447513" style="zoom:80%;"></li>
+</ul>
+</li>
+<li><em><strong>泳道</strong></em></li>
+<li><em><strong>对象流</strong></em><ul>
+<li>对象放在活动图中，并用一个依赖将其连接到进行创建、修改或撤销等动作状态或者活动状态上</li>
+<li>对象流是<em><strong>动作状态或者活动状态与对象之间的依赖关系</strong></em>，表示动作使用对象或动作对对象的影响</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-图书馆活动图"><a href="#3-图书馆活动图" class="headerlink" title="3. 图书馆活动图"></a>3. 图书馆活动图</h3><h3 id="4-活动图和状态图区别"><a href="#4-活动图和状态图区别" class="headerlink" title="4. 活动图和状态图区别"></a>4. 活动图和状态图区别</h3><ul>
+<li><p>活动图着重表现从<strong>一个活动到另一个活动的控制流</strong>，是<em><strong>内部处理驱动的流程</strong></em></p>
+</li>
+<li><p>状态图着重描述从<strong>一个状态到另一个状态的流程</strong>，主要<em><strong>有外部事件的参与</strong></em></p>
+</li>
+</ul>
+<h3 id="5-活动图和流程图区别"><a href="#5-活动图和流程图区别" class="headerlink" title="5. 活动图和流程图区别"></a>5. 活动图和流程图区别</h3><ul>
+<li><p>流程图着重描述处理过程，它的主要控制结构是顺序、分支和循环，各个处理之间有严格的顺序和时间关系</p>
+</li>
+<li><p>活动图描述的则是对象活动的顺序关系所遵循的规则，它着重表现的是系统的行为，而非系统的处理过程</p>
+</li>
+<li><p>活动图能够表示<em><strong>并发活动</strong></em>的情形，流程图不能</p>
+</li>
+</ul>
+<h2 id="四-类图-对象图"><a href="#四-类图-对象图" class="headerlink" title="四. 类图/对象图"></a>四. 类图/对象图</h2><h3 id="1-类图的概念"><a href="#1-类图的概念" class="headerlink" title="1. 类图的概念"></a>1. 类图的概念</h3><ul>
+<li><p>描述<strong>类、接口及它们之间关系</strong>的图</p>
+</li>
+<li><p>显示系统中各个类的<strong>静态结构</strong></p>
+</li>
+</ul>
+<h3 id="2-类图的元素"><a href="#2-类图的元素" class="headerlink" title="2. 类图的元素"></a>2. 类图的元素</h3><p><em><strong>类（class）、接口（interface）、依赖关系（dependency）、泛化关系（generalization）、关联关系（association）、实现关系（realization）</strong></em></p>
+<h3 id="3-类"><a href="#3-类" class="headerlink" title="3. 类"></a>3. 类</h3><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/F3DFFE17429007C9A725FF957673FCF2.png" alt="img" style="zoom: 45%;">
+
+<ul>
+<li><em><strong>分析阶段的类</strong></em>：不考虑方法</li>
+<li><em><strong>设计阶段的类</strong></em>：进行拆分</li>
+<li>数量对比：设计阶段类图类的数量 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.312ex" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.751ex" role="img" focusable="false" viewBox="0 -636 778 774"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2265" d="M83 616Q83 624 89 630T99 636Q107 636 253 568T543 431T687 361Q694 356 694 346T687 331Q685 329 395 192L107 56H101Q83 58 83 76Q83 77 83 79Q82 86 98 95Q117 105 248 167Q326 204 378 228L626 346L360 472Q291 505 200 548Q112 589 98 597T83 616ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"></path></g></g></g></svg></mjx-container> 分析阶段类数</li>
+</ul>
+<p>类面向对象系统组织结构的核心</p>
+<p><em><strong><u>类的组成：</u></strong></em></p>
+<ul>
+<li><em><strong>名称（Name）：</strong></em>名词、首字母大写、简单名和路径名</li>
+<li><em><strong>属性（Attribute）：</strong></em> 描述对象具备的特性<ul>
+<li>任意数目的属性，也可以没有属性</li>
+<li><strong>UML类属性语法：[可见性] 属性名 [类型] [=初始值]</strong><ul>
+<li>属性提倡私有，通过方法进行修改</li>
+<li>属性的可见性 $\left{ <mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.452ex" xmlns="http://www.w3.org/2000/svg" width="104.525ex" height="2.149ex" role="img" focusable="false" viewBox="0 -750 46200 950"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="merror" data-mjx-error="You can't use 'macro parameter character #' in math mode" title="You can't use 'macro parameter character #' in math mode"><rect data-background="true" width="46200" height="950" y="-200"></rect><title>You can't use 'macro parameter character #' in math mode</title><g data-mml-node="mtext" style="font-family: serif"><text data-variant="-explicitFont" transform="scale(1,-1)" font-size="884px">\begin{aligned} public + \ private- \ protected# \ package \sim \end{aligned}</text></g></g></g></g></svg></mjx-container> \right.$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em><strong>操作（Operation）：</strong></em> 对类的对象所能做的事务的抽象<ul>
+<li><strong>类操作的语法为：[可见性] 操作名 [(参数列表)] [:返回类型]</strong></li>
+<li><strong>返回类型、名称和参数一起被称为操作签名</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="4-接口"><a href="#4-接口" class="headerlink" title="4. 接口"></a>4. 接口</h3><p>没有给出对象的实现和状态的情况下对对象行为的描述</p>
+<p>包含操作但<strong>不包含属性</strong>，没有对外界可见的关联，一个类可以实现一个或多个接口</p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223183017010.png" alt="image-20211223183017010" style="zoom:80%;">
+
+<h3 id="5-类之间的关系"><a href="#5-类之间的关系" class="headerlink" title="5. 类之间的关系"></a>5. 类之间的关系</h3><ul>
+<li><p><u><em><strong>依赖关系</strong></em></u></p>
+<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223183209032.png" alt="image-20211223183209032" style="zoom:50%;"></li>
+<li>依赖关系的分类：<strong>使用依赖、抽象依赖、授权依赖、绑定依赖</strong><ul>
+<li>使用依赖，包括：调用call、参数parameter、发送send、实例化instantiate</li>
+<li>抽象依赖，包括：跟踪trace、精化refine、派生derive</li>
+<li>授权依赖，包括：访问access、导入import、友元friend</li>
+<li>绑定依赖，包括：绑定bind</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><u><em><strong>泛化关系</strong></em></u></p>
+<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223215841906.png" alt="image-20211223215841906" style="zoom:50%;"></li>
+<li>存在于一般元素和特殊元素间的分类关系</li>
+<li>描述了一种”a kind of“的关系</li>
+</ul>
+</li>
+<li><p><u><em><strong>关联关系</strong></em></u></p>
+<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223220010992.png" alt="image-20211223220010992" style="zoom:50%;"></li>
+<li><p>结构关系，指明对象之间的联系</p>
+</li>
+<li><p><em><strong>关联的名称</strong></em>：动词或动词短语（不必要），指示符消除歧义</p>
+</li>
+<li><p><em><strong>关联的角色</strong></em>：动词或动词短语，关联关系中一个类对另一个类所表现出来的职责（如，学习者和教学者）</p>
+</li>
+<li><p><em><strong>关联的多重性</strong></em>：多少对象参与该关联，一个取值范围、特定值、无限定的范围或一组离散值</p>
+</li>
+</ul>
+</li>
+<li><p><u><em><strong>实现关系</strong></em></u></p>
+<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223221006856.png" alt="image-20211223221006856" style="zoom:67%;"></li>
+<li>接口和其实现之间的关系</li>
+</ul>
+</li>
+<li><p><em><strong><u>聚合关系</u></strong></em></p>
+<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223220743091.png" alt="image-20211223220743091" style="zoom:50%;"></li>
+<li>整体与部分的关系</li>
+</ul>
+</li>
+<li><p><em><strong><u>组合</u></strong></em></p>
+<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223220816880.png" alt="image-20211223220816880" style="zoom:50%;"></li>
+<li>强聚合，类似于人体和躯干、四肢的关系</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-分析阶段的类图"><a href="#6-分析阶段的类图" class="headerlink" title="6. 分析阶段的类图"></a>6. 分析阶段的类图</h3><p>分析阶段主要对领域建模，与实现技术和平台无关，只需要掌握：<em><strong>类（属性、操作、可见性）</strong></em>、<em><strong>关联关系</strong></em>、<em><strong>组合关系</strong></em></p>
+<p>使用”<em><strong>事务模式</strong></em>“对领域建模</p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223221521392.png" alt="image-20211223221521392" style="zoom:80%;">
+
+<h3 id="7-设计阶段的类图"><a href="#7-设计阶段的类图" class="headerlink" title="7. 设计阶段的类图"></a>7. 设计阶段的类图</h3><h3 id="8-实例：图书馆管理系统的类图"><a href="#8-实例：图书馆管理系统的类图" class="headerlink" title="8. 实例：图书馆管理系统的类图"></a>8. 实例：图书馆管理系统的类图</h3><h2 id="五-交互图（时序图）"><a href="#五-交互图（时序图）" class="headerlink" title="五. 交互图（时序图）"></a>五. 交互图（时序图）</h2><h3 id="1-什么是交互图"><a href="#1-什么是交互图" class="headerlink" title="1. 什么是交互图"></a>1. 什么是交互图</h3><p>交互图是描述系统中<strong>对象之间</strong>通过<strong>消息通信</strong>的图，包括：<strong>序列图（也称时序图、顺序图）、协作图（也称通信图）</strong></p>
+<h3 id="2-序列图简介"><a href="#2-序列图简介" class="headerlink" title="2. 序列图简介"></a>2. 序列图简介</h3><p>序列图用来描述系统中<em><strong>对象间通过消息进行交互</strong></em>，它强调消息在<em><strong>时间轴上的先后</strong></em>顺序。</p>
+<p>序列图常用来描述<strong>用例的实现</strong>，标识了消息发生交互的<strong>先后顺序</strong>，明确<strong>类的职责</strong></p>
+<h3 id="3-序列图的组成"><a href="#3-序列图的组成" class="headerlink" title="3. 序列图的组成"></a>3. 序列图的组成</h3><p><em><strong>组成元素：对象、生命线、消息、激活</strong></em></p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223222353424.png" alt="image-20211223222353424" style="zoom:80%;">
+
+
+
+<ul>
+<li><em><strong>对象</strong></em><ul>
+<li>序列图顶部——交互开始就被创建，不在顶部——交互过程中被创建<ul>
+<li>创建的两种表示</li>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223222948287.png" alt="image-20211223222948287" style="zoom:67%;"></li>
+</ul>
+</li>
+<li>名称（对象名：类名）<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223223201098.png" alt="image-20211223223201098" style="zoom:50%;"></li>
+<li>注销：”X“符号</li>
+</ul>
+</li>
+<li><em><strong>生命线</strong></em><ul>
+<li>生命线是一条<strong>垂直的虚线</strong>，表示序列图中的对象在<strong>一段时间内的存在</strong></li>
+<li>有的生命线从顶部延伸至底部，所用的时间取决于交互持续的时间</li>
+</ul>
+</li>
+<li><em><strong>消息</strong></em><ul>
+<li><strong>对象之间某种形式的通信</strong></li>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223223346222.png" alt="image-20211223223346222" style="zoom: 67%;"></li>
+<li>如上图所示，消息的类型：调用call（对象之间或对象本身，格式”对象名.成员方法“）、返回return（被调用对象向调用者返回一个值）、发送send（向对象发送一个信号，调用是同步的机制，而信号是一种异步的机制）、创建create和注销destroy</li>
+<li>消息的编号，顺序编号和嵌套编号<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223224217547.png" alt="image-20211223224217547" style="zoom:80%;"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em><strong>激活</strong></em><ul>
+<li>激活（activation）表示对象被占用以完成某个任务</li>
+<li>去激活（Deactivation）指对象处于空闲状态、等待消息</li>
+<li><strong>矩形称为激活条或控制期，对象在激活条的顶部被激活，在完成自己的工作后被去激活</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="4-用例图、类图、序列图之间的关系"><a href="#4-用例图、类图、序列图之间的关系" class="headerlink" title="4. 用例图、类图、序列图之间的关系"></a>4. 用例图、类图、序列图之间的关系</h3><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223224654959.png" alt="image-20211223224654959" style="zoom:67%;">
+
+<p><em><strong><u>三种UML图对比</u></strong></em></p>
+<table>
+<thead>
+<tr>
+<th align="center">用例图</th>
+<th align="center">类图</th>
+<th align="center">序列图</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>动态行为</strong>  <strong>（系统外在行为）</strong></td>
+<td align="center"><strong>静态结构</strong>  <strong>（系统内在结构）</strong></td>
+<td align="center"><strong>动态行为</strong>  <strong>（系统内在行为）</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>参与者、用例</strong></td>
+<td align="center"><strong>类</strong></td>
+<td align="center"><strong>对象</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>包含、扩展、泛化</strong></td>
+<td align="center"><strong>依赖、关联、泛化</strong></td>
+<td align="center"><strong>消息</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>用例描述</strong></td>
+<td align="center"><strong>事务模式</strong></td>
+<td align="center"><strong>BCE模式</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>业务流程</strong></td>
+<td align="center"><strong>领域概念</strong></td>
+<td align="center"><strong>概念与流程的关联</strong></td>
+</tr>
+</tbody></table>
+<p>画图顺序：用例图 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.054ex" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.242ex" role="img" focusable="false" viewBox="0 -525 1000 549"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="21D2" d="M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z"></path></g></g></g></svg></mjx-container> 类图 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.054ex" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.242ex" role="img" focusable="false" viewBox="0 -525 1000 549"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="21D2" d="M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z"></path></g></g></g></svg></mjx-container> 序列图</p>
+<h3 id="5-BCE模式？？？？？"><a href="#5-BCE模式？？？？？" class="headerlink" title="5. BCE模式？？？？？"></a>5. BCE模式？？？？？</h3><p>BCE（Boundary、Control、Entity）</p>
+<ul>
+<li>边界类 Boundary：<strong>隔离系统内部和外部</strong><ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223225152576.png" alt="image-20211223225152576" style="zoom:50%;"></li>
+</ul>
+</li>
+<li>控制类 Control：<strong>在分析阶段，通常针对一个用例生成一个控制类</strong><ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223225222108.png" alt="image-20211223225222108" style="zoom:67%;"></li>
+</ul>
+</li>
+<li>实体类 Entity：<strong>对应于类图中领域概念中的类</strong>，封装数据结构和数据存储有关的类<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223225236236.png" alt="image-20211223225236236" style="zoom:67%;"></li>
+</ul>
+</li>
+</ul>
+<p><strong>新版序列图，一个序列图可以描述多个场景</strong> <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.054ex" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.242ex" role="img" focusable="false" viewBox="0 -525 1000 549"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="21D2" d="M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z"></path></g></g></g></svg></mjx-container> 组合片段？（不建议）</p>
+<h3 id="6-实例：图书馆管理系统的序列图"><a href="#6-实例：图书馆管理系统的序列图" class="headerlink" title="6. 实例：图书馆管理系统的序列图"></a>6. 实例：图书馆管理系统的序列图</h3><h3 id="7-Frame"><a href="#7-Frame" class="headerlink" title="7. Frame"></a>7. Frame</h3><p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211223233309370.png" alt="image-20211223233309370"></p>
+<h3 id="8-组合片段"><a href="#8-组合片段" class="headerlink" title="8. 组合片段"></a>8. 组合片段</h3><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224001943167.png" alt="image-20211224001943167" style="zoom:80%;">
+
+
+
+<ul>
+<li>opt：可能发生或可能不发生的序列，可以在临界条件中指定序列发生的条件</li>
+<li>alt：设置一个临界条件来指示该片段可以运行的条件</li>
+<li>loop：片段重复一定次数，可以在临界条件中指示片段重复的条件</li>
+<li>break：如果执行此片段，则放弃序列的其余部分</li>
+<li>par：并行处理</li>
+<li>critical：此片段中的消息不得与其他消息交错</li>
+<li>ref：在一个交互图中，引用其他的交互图</li>
+</ul>
+<h3 id="9-协作图"><a href="#9-协作图" class="headerlink" title="9. 协作图"></a>9. 协作图</h3><p><em><strong>协作图</strong></em>：也称为通信图，它描述了系统中，对象间通过消息进行的交互，强调了<strong>对象在交互行为中承担的角色</strong></p>
+<p>包含元素：对象、链、消息</p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224104733984.png" alt="image-20211224104733984" style="zoom:80%;">
+
+
+
+<p>序列图与协作图都表示对象之间的交互作用，只是它们的侧重点有所不同</p>
+<ul>
+<li>序列图描述了交互过程中的<strong>时间顺序</strong>，但没有明确地表达对象之间的关系</li>
+<li>协作图<strong>描述了对象之间的关系</strong>，但时间顺序必须从<strong>顺序号</strong>获得</li>
+<li>两种图的语义是等价的，可以从一种形式的图转换成另一种形式的图，而不丢失任何信息（<em><strong>协作图是序列图去掉时序用序列号表示</strong></em>）</li>
+</ul>
+<h2 id="六-状态图"><a href="#六-状态图" class="headerlink" title="六. 状态图"></a>六. 状态图</h2><p><em><strong><u>状态图</u><em><strong>主要用于描述</strong></em>一个对象在其生存期间的动态行为</strong></em>，表现为一个对象所经历的<em><strong>状态序列</strong></em>，引起状态转移的<em><strong>事件</strong></em>（Event），以及因状态转移而<em><strong>伴随的动作</strong></em>（Action）</p>
+<p><em><strong><u>状态图元素</u></strong></em></p>
+<ul>
+<li><p><em><strong>状态</strong></em></p>
+<ul>
+<li>在此期间，满足某些条件、执行某些活动或等待某些事件</li>
+<li>状态图圆角矩形表示</li>
+<li>初始状态、终止状态：<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224105746874.png" alt="image-20211224105746874" style="zoom:50%;"></li>
+</ul>
+</li>
+<li><p><strong>*<u>转移</u><em><strong>（两个状态之间的一种关系）：在</strong>源状态</em>*中执行一定的动作，并在某个</strong>特定事件发生<strong>而且某个特定的</strong>警界条件满足**时进入目标状态</p>
+<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224105844073.png" alt="image-20211224105844073" style="zoom:50%;"></li>
+<li>触发事件（转移诱因）、警戒条件（条件满足才转移）、结果（对象转移后的结果）</li>
+<li>自身转移</li>
+</ul>
+</li>
+<li><p><em><strong>动作：</strong></em>可执行的原子操作，不可中断，执行时间可忽略（EntryActions、DoActions、ExitActions）</p>
+</li>
+<li><p><em><strong>组合状态：</strong></em>嵌套子状态</p>
+<ul>
+<li><table>
+<thead>
+<tr>
+<th><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224111828624.png" alt="image-20211224111828624"></th>
+<th><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224111836676.png" alt="image-20211224111836676"></th>
+</tr>
+</thead>
+</table>
+</li>
+<li><p>进入节点：<strong>直接通过一个节点进入状态</strong>，<strong>此节点称之为进入节点或选择节点</strong></p>
+<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224112608193.png" alt="image-20211224112608193" style="zoom:50%;"></li>
+</ul>
+</li>
+<li><p>退出节点：状态内部子状态转移到外部状态，边界经过退出节点</p>
+<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224112659874.png" alt="image-20211224112659874" style="zoom:67%;"></li>
+</ul>
+</li>
+<li><p>历史状态：记住退出时的子状态</p>
+</li>
+<li><p>并发：组合状态在某一时刻同时达到多个子状态</p>
+<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224112553688.png" alt="image-20211224112553688" style="zoom:67%;"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><em><strong><u>状态图实例</u></strong></em></p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224112742700.png" alt="image-20211224112742700" style="zoom:67%;">
+
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224112802114.png" alt="image-20211224112802114" style="zoom:67%;">
+
+<h2 id="七-组件图-部署图（略）"><a href="#七-组件图-部署图（略）" class="headerlink" title="七. 组件图+部署图（略）"></a>七. 组件图+部署图（略）</h2><h3 id="1-组件图"><a href="#1-组件图" class="headerlink" title="1. 组件图"></a>1. 组件图</h3><p><strong>组件图描述了软件的各种组件以及它们之间的依赖关系</strong></p>
+<p><strong>组件图可以用来显示编译、链接或执行时组件之间的依赖关系，以及组件的接口和调用关系</strong></p>
+<p>组件图包含元素：组件、接口、依赖关系</p>
+<p>一般组件就是一个实际文件：<strong>deployment componen</strong>，如dll文件、exe文件、COM+对象、CORBA对象、EJB、动态Web页、数据库表等；<strong>work product component</strong>，如源代码文件，数据文件等，这些构件可以用来产生deployment component；<strong>execution component</strong>，系统执行后得到的构件</p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224114411401.png" alt="image-20211224114411401" style="zoom:80%;">
+
+<p>组件和接口之间的关系：</p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224114649615.png" alt="image-20211224114649615" style="zoom:67%;">
+
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224114523592.png" alt="image-20211224114523592">
+
+<h3 id="2-部署图（实施图）"><a href="#2-部署图（实施图）" class="headerlink" title="2. 部署图（实施图）"></a>2. 部署图（实施图）</h3><p>部署模型通常与组件模型并行开发</p>
+<p>用来描述系统<strong>硬件的物理拓扑结构</strong>以及在此结构上执行的<strong>软构件</strong></p>
+<p>一个系统模型只有一个部署图，可以显示计算节点的拓扑结构和通信路径、节点上运行的软构件等，由体系结构设计师 / 网络工程师 / 系统工程师等描述</p>
+<p>基本概念：node节点（处理器、设备），connection连接</p>
+<ul>
+<li>节点是存在于运行时并代表一项计算资源的物理元素，一般至少拥有一些内存，而且通常具有处理能力<ul>
+<li>处理器具有处理能力的节点，即它可以执行构件<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224120600435.png" alt="image-20211224120600435" style="zoom:80%;"></li>
+</ul>
+</li>
+<li>设备是无计算能力的外部设备，如Modem、终端<ul>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224120620298.png" alt="image-20211224120620298" style="zoom:80%;"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>连接是代表一种交流的机制（物理媒介和软件协议）</li>
+</ul>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224120806152.png" alt="image-20211224120806152" style="zoom:80%;">
+
+
+
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224120819802.png" alt="image-20211224120819802" style="zoom:80%;"></article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/2022/01/01/Software%20Process%20and%20Tools/08%E9%9C%80%E6%B1%82%E8%8E%B7%E5%8F%96%E4%B8%8E%E5%88%86%E6%9E%90/" title="软件过程与工具——软件需求与需求获取"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: 软件过程与工具——软件需求与需求获取</span></a><a class="button is-default" href="/2022/01/01/Software%20Process%20and%20Tools/06%E8%BD%AF%E4%BB%B6%E6%BC%94%E5%8C%96%E4%B8%8E%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/" title="软件过程与工具——软件演化与配置管理"><span class="has-text-weight-semibold">Next: 软件过程与工具——软件演化与配置管理</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="Haojen/Claudia-theme-blog" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com//"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/FuLucas"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com//"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com//"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright ©</span><span> FuLucas 2022</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/post.js"></script></body></html>
