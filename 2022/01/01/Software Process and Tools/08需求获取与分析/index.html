@@ -1,8 +1,7 @@
 <!DOCTYPE html><html class="appearance-auto" lang="en"><head><meta charset="UTF-8"><title>软件过程与工具——软件需求与需求获取</title><meta name="description" content="Shifting eyes and vacancy coming."><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
-<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="软件需求与需求获取
-一. 软件需求的定义
-对用户需求的管理水平是决定软件成败的重要原因！
+<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="软件需求与需求获取一. 软件需求的定义对用户需求的管理水平是决定软件成败的重要原因！
 错误需求的扩散效应：错误的需求会导致之后的设计和编码等工作都是错误的
+
 
 错误需求的修复代价：随着需求、设计、编码、测试、执行的过程代价增高（需求在出错之后会严重影响随后实现的系统）
 根本原因：需求的鸿沟（期望差异）——开发者开发的与用户所想得到的软件存在着巨大期望差异！
@@ -12,7 +11,7 @@
 为软件项目的成本、时间、风险估计提供准确的依据
 减少开发工作量，避免将时间与资源浪费在设计与实现错误的需求上
 通过提供需求文档和需求基线，来有效的管理系统演化与变更
-作为客户与开.."><meta name="generator" content="Hexo 6.0.0">
+作为客户与开发.."><meta name="generator" content="Hexo 6.0.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 <style>mjx-container[jax="SVG"] {
   direction: ltr;
@@ -126,15 +125,14 @@ mjx-container[display="true"] {
 mjx-container[display="true"] + br {
   display: none;
 }
-</style></head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">FuLucas's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">软件过程与工具——软件需求与需求获取</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82%E4%B8%8E%E9%9C%80%E6%B1%82%E8%8E%B7%E5%8F%96"><span class="toc-text">软件需求与需求获取</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80.-%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">一. 软件需求的定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C.-%E9%9C%80%E6%B1%82%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-text">二. 需求的分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89.-%E5%A5%BD%E7%9A%84%E9%9C%80%E6%B1%82%E4%B8%8E%E5%9D%8F%E7%9A%84%E9%9C%80%E6%B1%82"><span class="toc-text">三. 好的需求与坏的需求</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A5%BD%E9%9C%80%E6%B1%82%E7%9A%84%E7%89%B9%E6%80%A7"><span class="toc-text">1. 好需求的特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%90%88%E6%A0%BC%E9%9C%80%E6%B1%82%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-text">2. 不合格需求的原因</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B.-%E9%9C%80%E6%B1%82%E5%B7%A5%E7%A8%8Brequirement-engineering-re"><span class="toc-text">四. 需求工程（Requirement Engineering, RE）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E8%8E%B7%E5%8F%96-requirement-elicitation"><span class="toc-text">1. 需求获取 Requirement Elicitation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90-requirement-analysis"><span class="toc-text">2. 需求分析 Requirement Analysis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E8%A7%84%E6%A0%BC%E8%AF%B4%E6%98%8E-software-requirement-specification-srs"><span class="toc-text">3. 需求规格说明 Software Requirement Specification, SRS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E9%AA%8C%E8%AF%81-requirement-verification"><span class="toc-text">4. 需求验证 Requirement Verification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E7%AE%A1%E7%90%86-requirement-management"><span class="toc-text">5. 需求管理 Requirement Management</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94.-%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%85%B6%E4%BB%96%E8%A6%81%E7%B4%A0%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">五. *软件需求与软件工程其他要素的关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD.-%E4%B8%8E%E9%9C%80%E6%B1%82%E5%B7%A5%E7%A8%8B%E6%9C%89%E5%85%B3%E7%9A%84%E6%BD%9C%E5%9C%A8%E9%A3%8E%E9%99%A9"><span class="toc-text">六. *与需求工程有关的潜在风险</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83.-%E9%9C%80%E6%B1%82%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95"><span class="toc-text">七. 需求获取方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB.-%E9%9C%80%E6%B1%82%E8%8E%B7%E5%8F%96%E6%89%80%E9%9D%A2%E4%B8%B4%E7%9A%84%E6%8C%91%E6%88%98"><span class="toc-text">八. 需求获取所面临的挑战</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D.-%E9%9C%80%E6%B1%82%E8%8E%B7%E5%8F%96%E6%8A%80%E6%9C%AF"><span class="toc-text">九. 需求获取技术</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%B6%E9%9B%86%E7%8E%B0%E6%9C%89%E4%B9%A6%E9%9D%A2%E8%B5%84%E6%96%99"><span class="toc-text">1. 收集现有书面资料</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%A2%E5%AF%B9%E9%9D%A2%E8%AE%BF%E8%B0%88"><span class="toc-text">2. 面对面访谈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E7%A0%94%E8%AE%A8%E4%BC%9A-workshop"><span class="toc-text">3. 需求研讨会 Workshop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%B0%E5%9C%BA%E8%A7%82%E5%AF%9F%E4%BD%93%E9%AA%8C"><span class="toc-text">4. 现场观察&#x2F;体验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%B4%E8%84%91%E9%A3%8E%E6%9A%B4"><span class="toc-text">5. 头脑风暴</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81.-%E9%9C%80%E6%B1%82%E8%8E%B7%E5%8F%96%E7%9A%84%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9"><span class="toc-text">十. 需求获取的主要内容</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E6%95%85%E4%BA%8B%E4%B8%8E%E7%94%A8%E4%BE%8B%E5%BB%BA%E6%A8%A1"><span class="toc-text">用户故事与用例建模</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80.-%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E7%94%A8%E6%88%B7%E6%95%85%E4%BA%8Buser-story"><span class="toc-text">一. 敏捷开发中的“用户故事”（User Story）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E6%95%85%E4%BA%8B"><span class="toc-text">1. 用户故事</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#invest-%E5%A5%BD%E7%9A%84%E7%94%A8%E6%88%B7%E6%95%85%E4%BA%8B%E5%BA%94%E5%85%B7%E5%A4%87%E7%9A%84%E7%89%B9%E5%BE%81"><span class="toc-text">2. INVEST 好的用户故事应具备的特征</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E6%95%85%E4%BA%8B%E6%94%AF%E6%8C%81%E6%95%8F%E6%8D%B7%E8%BF%AD%E4%BB%A3%E8%AE%A1%E5%88%92"><span class="toc-text">3. 用户故事支持敏捷迭代计划</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C.-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95%E4%B8%AD%E7%9A%84%E7%94%A8%E4%BE%8Buse-case"><span class="toc-text">二. 面向对象方法中的“用例”（Use Case）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E4%BE%8B-use-case"><span class="toc-text">1. 用例 Use Case</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E4%BE%8B%E6%96%B9%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="toc-text">2. 用例方法的基本思想</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89.-%E7%94%A8%E4%BE%8B%E5%BB%BA%E6%A8%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%BF%87%E7%A8%8B"><span class="toc-text">三. 用例建模的基本过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B.-%E7%94%A8%E4%BE%8B%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%8F%90%E4%BA%A4%E7%89%A9"><span class="toc-text">四. 用例模型的提交物</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94.-%E6%B4%BB%E5%8A%A8%E5%9B%BE-%E6%B3%B3%E9%81%93%E5%9B%BE"><span class="toc-text">五. 活动图 &amp; 泳道图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E7%9A%84%E7%BB%93%E6%9E%84%E5%8C%96%E5%88%86%E6%9E%90"><span class="toc-text">需求的结构化分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80.-%E7%BB%93%E6%9E%84%E5%8C%96%E6%96%B9%E6%B3%95vs%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="toc-text">一. 结构化方法vs面向对象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C.-%E9%9C%80%E6%B1%82%E7%9A%84%E7%BB%93%E6%9E%84%E5%8C%96%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95"><span class="toc-text">二. 需求的结构化分析方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89.-%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BEdfd-data-flow-diagram"><span class="toc-text">三. 数据流图（DFD, Data Flow Diagram）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E8%81%94dfd%E5%9B%BE"><span class="toc-text">1. 关联DFD图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dfd%E7%89%87%E6%AE%B5"><span class="toc-text">2. DFD片段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dfd%E7%9A%84%E5%B1%82%E6%AC%A1"><span class="toc-text">3. DFD的层次</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dfd%E7%9A%84%E8%B4%A8%E9%87%8F%E8%AF%84%E4%BC%B0"><span class="toc-text">4. DFD的质量评估</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dfd%E7%BB%86%E8%8A%82%E5%86%85%E5%AE%B9"><span class="toc-text">5. DFD细节内容</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B.-%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8dd"><span class="toc-text">四. 数据字典（DD）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94.-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90erdidef1x%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="toc-text">五. 数据分析（ERD、IDEF1X）什么区别？？？？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BD%93%E5%85%B3%E7%B3%BB%E5%9B%BEerd"><span class="toc-text">1. 实体关系图——ERD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BD%93%E5%85%B3%E7%B3%BB%E5%9B%BEidef1x"><span class="toc-text">2. 实体关系图——IDEF1X</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%86%E6%9E%90"><span class="toc-text">面向对象的分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80.-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0"><span class="toc-text">一. 面向对象的分析方法概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="toc-text">1. 需求分析的本质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90"><span class="toc-text">2. 面向对象分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C.-%E5%BB%BA%E7%AB%8B%E9%9D%99%E6%80%81%E7%BB%93%E6%9E%84%E6%A8%A1%E5%9E%8B"><span class="toc-text">二. 建立静态结构模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89.-%E5%BB%BA%E7%AB%8B%E5%8A%A8%E6%80%81%E8%A1%8C%E4%B8%BA%E6%A8%A1%E5%9E%8B"><span class="toc-text">三. 建立动态行为模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B.-%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90"><span class="toc-text">四. 案例分析</span></a></li></ol></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/HIT-Software-Process-and-Tools"><i class="tag post-item-tag">HIT-Software-Process-and-Tools</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">软件过程与工具——软件需求与需求获取</h1><time class="has-text-grey" datetime="2022-01-01T15:38:38.000Z">2022-01-01</time><article class="mt-2 post-content"><h1 id="软件需求与需求获取">软件需求与需求获取</h1>
-<h2 id="一.-软件需求的定义">一. 软件需求的定义</h2>
-<p><strong><em>对用户需求的管理水平是决定软件成败的重要原因！</em></strong></p>
-<p><strong><em>错误需求的扩散效应</em></strong>：错误的需求会导致之后的设计和编码等工作都是错误的</p>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224121404794.png" alt="image-20211224121404794" style="zoom:80%;"></p>
-<p><strong><em>错误需求的修复代价：</em></strong>随着需求、设计、编码、测试、执行的过程代价增高（需求在出错之后会严重影响随后实现的系统）</p>
-<p><strong><em><u>根本原因：</u></em></strong>需求的鸿沟（<strong><em>期望差异</em></strong>）——开发者开发的与用户所想得到的软件存在着巨大期望差异！</p>
-<p><strong><em><u>！！！软件需求的定义：</u></em></strong> 以一种清晰、简洁、一致且无二义性的方式，描述<strong>用户</strong>对目标软件系统在功能、行为、性能、设计约束等方面的期望，是在开发过程中<strong>对系统的约束</strong></p>
-<p><strong><em>需求是质量的基础</em></strong></p>
+</style></head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">FuLucas's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">软件过程与工具——软件需求与需求获取</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82%E4%B8%8E%E9%9C%80%E6%B1%82%E8%8E%B7%E5%8F%96"><span class="toc-text">软件需求与需求获取</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">一. 软件需求的定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E9%9C%80%E6%B1%82%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-text">二. 需求的分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E5%A5%BD%E7%9A%84%E9%9C%80%E6%B1%82%E4%B8%8E%E5%9D%8F%E7%9A%84%E9%9C%80%E6%B1%82"><span class="toc-text">三. 好的需求与坏的需求</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%A5%BD%E9%9C%80%E6%B1%82%E7%9A%84%E7%89%B9%E6%80%A7"><span class="toc-text">1. 好需求的特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%8D%E5%90%88%E6%A0%BC%E9%9C%80%E6%B1%82%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-text">2. 不合格需求的原因</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-%E9%9C%80%E6%B1%82%E5%B7%A5%E7%A8%8B%EF%BC%88Requirement-Engineering-RE%EF%BC%89"><span class="toc-text">四. 需求工程（Requirement Engineering, RE）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%9C%80%E6%B1%82%E8%8E%B7%E5%8F%96-Requirement-Elicitation"><span class="toc-text">1. 需求获取 Requirement Elicitation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90-Requirement-Analysis"><span class="toc-text">2. 需求分析 Requirement Analysis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%9C%80%E6%B1%82%E8%A7%84%E6%A0%BC%E8%AF%B4%E6%98%8E-Software-Requirement-Specification-SRS"><span class="toc-text">3. 需求规格说明 Software Requirement Specification, SRS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E9%9C%80%E6%B1%82%E9%AA%8C%E8%AF%81-Requirement-Verification"><span class="toc-text">4. 需求验证 Requirement Verification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E9%9C%80%E6%B1%82%E7%AE%A1%E7%90%86-Requirement-Management"><span class="toc-text">5. 需求管理 Requirement Management</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94-%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%85%B6%E4%BB%96%E8%A6%81%E7%B4%A0%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">五. *软件需求与软件工程其他要素的关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD-%E4%B8%8E%E9%9C%80%E6%B1%82%E5%B7%A5%E7%A8%8B%E6%9C%89%E5%85%B3%E7%9A%84%E6%BD%9C%E5%9C%A8%E9%A3%8E%E9%99%A9"><span class="toc-text">六. *与需求工程有关的潜在风险</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83-%E9%9C%80%E6%B1%82%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95"><span class="toc-text">七. 需求获取方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB-%E9%9C%80%E6%B1%82%E8%8E%B7%E5%8F%96%E6%89%80%E9%9D%A2%E4%B8%B4%E7%9A%84%E6%8C%91%E6%88%98"><span class="toc-text">八. 需求获取所面临的挑战</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D-%E9%9C%80%E6%B1%82%E8%8E%B7%E5%8F%96%E6%8A%80%E6%9C%AF"><span class="toc-text">九. 需求获取技术</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%94%B6%E9%9B%86%E7%8E%B0%E6%9C%89%E4%B9%A6%E9%9D%A2%E8%B5%84%E6%96%99"><span class="toc-text">1. 收集现有书面资料</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%9D%A2%E5%AF%B9%E9%9D%A2%E8%AE%BF%E8%B0%88"><span class="toc-text">2. 面对面访谈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%9C%80%E6%B1%82%E7%A0%94%E8%AE%A8%E4%BC%9A-Workshop"><span class="toc-text">3. 需求研讨会 Workshop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%8E%B0%E5%9C%BA%E8%A7%82%E5%AF%9F-%E4%BD%93%E9%AA%8C"><span class="toc-text">4. 现场观察&#x2F;体验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%A4%B4%E8%84%91%E9%A3%8E%E6%9A%B4"><span class="toc-text">5. 头脑风暴</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81-%E9%9C%80%E6%B1%82%E8%8E%B7%E5%8F%96%E7%9A%84%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9"><span class="toc-text">十. 需求获取的主要内容</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E6%95%85%E4%BA%8B%E4%B8%8E%E7%94%A8%E4%BE%8B%E5%BB%BA%E6%A8%A1"><span class="toc-text">用户故事与用例建模</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E2%80%9C%E7%94%A8%E6%88%B7%E6%95%85%E4%BA%8B%E2%80%9D%EF%BC%88User-Story%EF%BC%89"><span class="toc-text">一. 敏捷开发中的“用户故事”（User Story）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%94%A8%E6%88%B7%E6%95%85%E4%BA%8B"><span class="toc-text">1. 用户故事</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-INVEST-%E5%A5%BD%E7%9A%84%E7%94%A8%E6%88%B7%E6%95%85%E4%BA%8B%E5%BA%94%E5%85%B7%E5%A4%87%E7%9A%84%E7%89%B9%E5%BE%81"><span class="toc-text">2. INVEST 好的用户故事应具备的特征</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%94%A8%E6%88%B7%E6%95%85%E4%BA%8B%E6%94%AF%E6%8C%81%E6%95%8F%E6%8D%B7%E8%BF%AD%E4%BB%A3%E8%AE%A1%E5%88%92"><span class="toc-text">3. 用户故事支持敏捷迭代计划</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95%E4%B8%AD%E7%9A%84%E2%80%9C%E7%94%A8%E4%BE%8B%E2%80%9D%EF%BC%88Use-Case%EF%BC%89"><span class="toc-text">二. 面向对象方法中的“用例”（Use Case）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%94%A8%E4%BE%8B-Use-Case"><span class="toc-text">1. 用例 Use Case</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%94%A8%E4%BE%8B%E6%96%B9%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="toc-text">2. 用例方法的基本思想</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E7%94%A8%E4%BE%8B%E5%BB%BA%E6%A8%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%BF%87%E7%A8%8B"><span class="toc-text">三. 用例建模的基本过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-%E7%94%A8%E4%BE%8B%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%8F%90%E4%BA%A4%E7%89%A9"><span class="toc-text">四. 用例模型的提交物</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94-%E6%B4%BB%E5%8A%A8%E5%9B%BE-amp-%E6%B3%B3%E9%81%93%E5%9B%BE"><span class="toc-text">五. 活动图 &amp; 泳道图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E7%9A%84%E7%BB%93%E6%9E%84%E5%8C%96%E5%88%86%E6%9E%90"><span class="toc-text">需求的结构化分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E7%BB%93%E6%9E%84%E5%8C%96%E6%96%B9%E6%B3%95vs%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="toc-text">一. 结构化方法vs面向对象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E9%9C%80%E6%B1%82%E7%9A%84%E7%BB%93%E6%9E%84%E5%8C%96%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95"><span class="toc-text">二. 需求的结构化分析方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE%EF%BC%88DFD-Data-Flow-Diagram%EF%BC%89"><span class="toc-text">三. 数据流图（DFD, Data Flow Diagram）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%85%B3%E8%81%94DFD%E5%9B%BE"><span class="toc-text">1. 关联DFD图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-DFD%E7%89%87%E6%AE%B5"><span class="toc-text">2. DFD片段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-DFD%E7%9A%84%E5%B1%82%E6%AC%A1"><span class="toc-text">3. DFD的层次</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-DFD%E7%9A%84%E8%B4%A8%E9%87%8F%E8%AF%84%E4%BC%B0"><span class="toc-text">4. DFD的质量评估</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-DFD%E7%BB%86%E8%8A%82%E5%86%85%E5%AE%B9"><span class="toc-text">5. DFD细节内容</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8%EF%BC%88DD%EF%BC%89"><span class="toc-text">四. 数据字典（DD）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%88ERD%E3%80%81IDEF1X%EF%BC%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F%EF%BC%9F%EF%BC%9F%EF%BC%9F"><span class="toc-text">五. 数据分析（ERD、IDEF1X）什么区别？？？？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%9E%E4%BD%93%E5%85%B3%E7%B3%BB%E5%9B%BE%E2%80%94%E2%80%94ERD"><span class="toc-text">1. 实体关系图——ERD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%9E%E4%BD%93%E5%85%B3%E7%B3%BB%E5%9B%BE%E2%80%94%E2%80%94IDEF1X"><span class="toc-text">2. 实体关系图——IDEF1X</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%86%E6%9E%90"><span class="toc-text">面向对象的分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0"><span class="toc-text">一. 面向对象的分析方法概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="toc-text">1. 需求分析的本质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90"><span class="toc-text">2. 面向对象分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E5%BB%BA%E7%AB%8B%E9%9D%99%E6%80%81%E7%BB%93%E6%9E%84%E6%A8%A1%E5%9E%8B"><span class="toc-text">二. 建立静态结构模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E5%BB%BA%E7%AB%8B%E5%8A%A8%E6%80%81%E8%A1%8C%E4%B8%BA%E6%A8%A1%E5%9E%8B"><span class="toc-text">三. 建立动态行为模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90"><span class="toc-text">四. 案例分析</span></a></li></ol></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/HIT-Software-Process-and-Tools"><i class="tag post-item-tag">HIT-Software-Process-and-Tools</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">软件过程与工具——软件需求与需求获取</h1><time class="has-text-grey" datetime="2022-01-01T15:38:38.000Z">2022-01-01</time><article class="mt-2 post-content"><h1 id="软件需求与需求获取"><a href="#软件需求与需求获取" class="headerlink" title="软件需求与需求获取"></a>软件需求与需求获取</h1><h2 id="一-软件需求的定义"><a href="#一-软件需求的定义" class="headerlink" title="一. 软件需求的定义"></a>一. 软件需求的定义</h2><p><em><strong>对用户需求的管理水平是决定软件成败的重要原因！</strong></em></p>
+<p><em><strong>错误需求的扩散效应</strong></em>：错误的需求会导致之后的设计和编码等工作都是错误的</p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224121404794.png" alt="image-20211224121404794" style="zoom:80%;">
+
+<p><em><strong>错误需求的修复代价：</strong></em>随着需求、设计、编码、测试、执行的过程代价增高（需求在出错之后会严重影响随后实现的系统）</p>
+<p><em><strong><u>根本原因：</u><em><strong>需求的鸿沟（</strong></em>期望差异</strong></em>）——开发者开发的与用户所想得到的软件存在着巨大期望差异！</p>
+<p><em><strong><u>！！！软件需求的定义：</u></strong></em> 以一种清晰、简洁、一致且无二义性的方式，描述<strong>用户</strong>对目标软件系统在功能、行为、性能、设计约束等方面的期望，是在开发过程中<strong>对系统的约束</strong></p>
+<p><em><strong>需求是质量的基础</strong></em></p>
 <ul>
 <li>为软件项目的成本、时间、风险估计提供准确的依据</li>
 <li>减少开发工作量，避免将时间与资源浪费在设计与实现错误的需求上</li>
@@ -142,48 +140,43 @@ mjx-container[display="true"] + br {
 <li>作为客户与开发团队之间<strong>正式合同</strong>的一部分</li>
 <li>为<strong>最终的验收测试</strong>提供<strong>标准</strong>和依据</li>
 </ul>
-<h2 id="二.-需求的分类">二. 需求的分类</h2>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224152550773.png" alt="image-20211224152550773" style="zoom:80%;"></p>
-<p><strong><em><u>业务需求（Business Requirements）：</u></em></strong>客户对于系统的<strong><em>高层次目标要求</em></strong>，定义了项目的<strong><em>远景和范畴</em></strong>。</p>
+<h2 id="二-需求的分类"><a href="#二-需求的分类" class="headerlink" title="二. 需求的分类"></a>二. 需求的分类</h2><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224152550773.png" alt="image-20211224152550773" style="zoom:80%;">
+
+<p><em><strong><u>业务需求（Business Requirements）：</u><em><strong>客户对于系统的</strong></em>高层次目标要求</strong></em>，定义了项目的<em><strong>远景和范畴</strong></em>。</p>
 <ul>
 <li>业务、客户、特性、价值、优先级</li>
 </ul>
-<p><strong><em><u>用户需求（User Requirements）：</u></em></strong>从用户角度描述的<strong><em><u>系统功能性需求与非功能需求</u></em></strong>，通常只涉及系统的<strong><em>外部行为</em></strong>而不涉及内部特性。</p>
-<p><strong><em><u>功能需求（Functional Requirements, FR）：</u></em></strong>系统应该提供的<strong><em>功能或服务</em></strong>，通常涉及用户或外部系统与该系统之间的交互，不考虑系统内部的实现细节。</p>
-<p><strong><em><u>非功能需求（Non-Functional Requirements, NFR）：</u></em></strong>从各个角度对系统的约束和限制，反映了客户对软件系统<strong><em>质量和性能</em></strong>的额外要求，如响应时间、数据精度、可靠性等。（NFR检验非常困难，一般采用一些可度量的特性进行描述）</p>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224155159109.png" alt="image-20211224155159109" style="zoom:90%;"></p>
-<p><strong><em>约束条件（Constraints）：</em></strong>系统设计和实现时必须满足的<strong>限制条件</strong>，对其进行权衡或调整是相当困难的。</p>
-<p><strong><em>业务规则（Business Rule）：</em></strong>对某些功能的可执行性或<strong>内部执行逻辑</strong>的一些限定条件。</p>
-<p><strong><em>外部接口需求：</em></strong>描述系统与其所处的<strong>外部环境之间如何进行交互</strong>，包括：用户接口需求UI、硬件接口需求、软件接口需求、通信接口需求。</p>
-<h2 id="三.-好的需求与坏的需求">三. 好的需求与坏的需求</h2>
-<h3 id="好需求的特性">1. 好需求的特性</h3>
-<ul>
-<li><strong><em>完整性：</em></strong>所要实现的功能描述清楚</li>
-<li><strong><em>正确性：</em></strong>准确地陈述其要开发的功能</li>
-<li><strong><em>可行性：</em></strong>在已知系统和环境的权能和限制范围内可以实施的</li>
-<li><strong><em>必要性：</em></strong>把客户真正所需要的和最终系统所需遵从的标准记录下来</li>
-<li><strong><em>划分优先级</em></strong></li>
-<li><strong><em>无二义性</em></strong></li>
-<li><strong><em>可验证性：</em></strong>检查一下每项需求是否能通过设计测试用例或其它的验证方法</li>
+<p><em><strong><u>用户需求（User Requirements）：</u><em><strong>从用户角度描述的</strong></em><u>系统功能性需求与非功能需求</u><em><strong>，通常只涉及系统的</strong></em>外部行为</strong></em>而不涉及内部特性。</p>
+<p><em><strong><u>功能需求（Functional Requirements, FR）：</u><em><strong>系统应该提供的</strong></em>功能或服务</strong></em>，通常涉及用户或外部系统与该系统之间的交互，不考虑系统内部的实现细节。</p>
+<p><em><strong><u>非功能需求（Non-Functional Requirements, NFR）：</u><em><strong>从各个角度对系统的约束和限制，反映了客户对软件系统</strong></em>质量和性能</strong></em>的额外要求，如响应时间、数据精度、可靠性等。（NFR检验非常困难，一般采用一些可度量的特性进行描述）</p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224155159109.png" alt="image-20211224155159109" style="zoom:90%;">
+
+<p><em><strong>约束条件（Constraints）：</strong></em>系统设计和实现时必须满足的<strong>限制条件</strong>，对其进行权衡或调整是相当困难的。</p>
+<p><em><strong>业务规则（Business Rule）：</strong></em>对某些功能的可执行性或<strong>内部执行逻辑</strong>的一些限定条件。</p>
+<p><em><strong>外部接口需求：</strong></em>描述系统与其所处的<strong>外部环境之间如何进行交互</strong>，包括：用户接口需求UI、硬件接口需求、软件接口需求、通信接口需求。</p>
+<h2 id="三-好的需求与坏的需求"><a href="#三-好的需求与坏的需求" class="headerlink" title="三. 好的需求与坏的需求"></a>三. 好的需求与坏的需求</h2><h3 id="1-好需求的特性"><a href="#1-好需求的特性" class="headerlink" title="1. 好需求的特性"></a>1. 好需求的特性</h3><ul>
+<li><em><strong>完整性：</strong></em>所要实现的功能描述清楚</li>
+<li><em><strong>正确性：</strong></em>准确地陈述其要开发的功能</li>
+<li><em><strong>可行性：</strong></em>在已知系统和环境的权能和限制范围内可以实施的</li>
+<li><em><strong>必要性：</strong></em>把客户真正所需要的和最终系统所需遵从的标准记录下来</li>
+<li><em><strong>划分优先级</strong></em></li>
+<li><em><strong>无二义性</strong></em></li>
+<li><em><strong>可验证性：</strong></em>检查一下每项需求是否能通过设计测试用例或其它的验证方法</li>
 </ul>
-<h3 id="不合格需求的原因">2. 不合格需求的原因</h3>
-<ul>
-<li><strong><em>无足够用户参与</em></strong></li>
-<li><strong><em>用户需求不断增加：</em></strong>结构紊乱，代码补丁使整个程序难以理解和维护；项目过大超过计划和预算范围。</li>
-<li><strong><em>模棱两可的需求</em></strong></li>
-<li><strong><em>不必要的特性：</em></strong>画蛇添足，需求规格说明未涉及；缺乏实用价值的功能。</li>
-<li><strong><em>过于精简的规格说明</em></strong></li>
-<li><strong><em>忽略了用户分类</em></strong></li>
-<li><strong><em>不准确的计划</em></strong></li>
+<h3 id="2-不合格需求的原因"><a href="#2-不合格需求的原因" class="headerlink" title="2. 不合格需求的原因"></a>2. 不合格需求的原因</h3><ul>
+<li><em><strong>无足够用户参与</strong></em></li>
+<li><em><strong>用户需求不断增加：</strong></em>结构紊乱，代码补丁使整个程序难以理解和维护；项目过大超过计划和预算范围。</li>
+<li><em><strong>模棱两可的需求</strong></em></li>
+<li><em><strong>不必要的特性：</strong></em>画蛇添足，需求规格说明未涉及；缺乏实用价值的功能。</li>
+<li><em><strong>过于精简的规格说明</strong></em></li>
+<li><em><strong>忽略了用户分类</strong></em></li>
+<li><em><strong>不准确的计划</strong></em></li>
 </ul>
-<h2 id="四.-需求工程requirement-engineering-re">四. 需求工程（Requirement Engineering, RE）</h2>
-<p><strong><em>需求工程的总体流程</em></strong></p>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224162559068.png" alt="image-20211224162559068" style="zoom:80%;"></p>
-<figure>
-<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224162616480.png" alt="image-20211224162616480"><figcaption aria-hidden="true">image-20211224162616480</figcaption>
-</figure>
-<h3 id="需求获取-requirement-elicitation">1. 需求获取 Requirement Elicitation</h3>
-<p>通过与用户的交流，对现有系统的观察及对任务进行分析，从而开发、获取和修订用户的需求</p>
+<h2 id="四-需求工程（Requirement-Engineering-RE）"><a href="#四-需求工程（Requirement-Engineering-RE）" class="headerlink" title="四. 需求工程（Requirement Engineering, RE）"></a>四. 需求工程（Requirement Engineering, RE）</h2><p><em><strong>需求工程的总体流程</strong></em></p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224162559068.png" alt="image-20211224162559068" style="zoom:80%;">
+
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224162616480.png" alt="image-20211224162616480"></p>
+<h3 id="1-需求获取-Requirement-Elicitation"><a href="#1-需求获取-Requirement-Elicitation" class="headerlink" title="1. 需求获取 Requirement Elicitation"></a>1. 需求获取 Requirement Elicitation</h3><p>通过与用户的交流，对现有系统的观察及对任务进行分析，从而开发、获取和修订用户的需求</p>
 <ul>
 <li>对用户进行分类</li>
 <li>聆听每一类用户需求</li>
@@ -191,8 +184,7 @@ mjx-container[display="true"] + br {
 <li>形成<strong>文档化的描述</strong></li>
 <li>签字确认</li>
 </ul>
-<h3 id="需求分析-requirement-analysis">2. 需求分析 Requirement Analysis</h3>
-<p>对收集到的需求进行提炼、分析和审查，为最终用户所看到的系统建立概念化的分析模型</p>
+<h3 id="2-需求分析-Requirement-Analysis"><a href="#2-需求分析-Requirement-Analysis" class="headerlink" title="2. 需求分析 Requirement Analysis"></a>2. 需求分析 Requirement Analysis</h3><p>对收集到的需求进行提炼、分析和审查，为最终用户所看到的系统建立概念化的分析模型</p>
 <ul>
 <li>定义<strong>系统边界</strong></li>
 <li>建立<strong>软件原型</strong></li>
@@ -201,57 +193,44 @@ mjx-container[display="true"] + br {
 <li>建立<strong>需求分析模型</strong></li>
 <li>创建<strong>数据字典</strong></li>
 </ul>
-<h3 id="需求规格说明-software-requirement-specification-srs">3. 需求规格说明 Software Requirement Specification, SRS</h3>
-<ul>
+<h3 id="3-需求规格说明-Software-Requirement-Specification-SRS"><a href="#3-需求规格说明-Software-Requirement-Specification-SRS" class="headerlink" title="3. 需求规格说明 Software Requirement Specification, SRS"></a>3. 需求规格说明 Software Requirement Specification, SRS</h3><ul>
 <li>需求开发的结果</li>
 <li>精确的、形式化地阐述一个软件系统必须提供的功能、非功能、所要考虑的限制条件等</li>
 <li>作为用户和开发者之间的一个契约</li>
 <li>是用户、分析人员和设计人员之间进行理解和交流的依据</li>
 </ul>
-<h3 id="需求验证-requirement-verification">4. 需求验证 Requirement Verification</h3>
-<p>以需求规格说明为输入，通过评审、模拟或快速原型等途径，分析需求规格的正确性和可行性，发现存在的错误或缺陷并及时更改和补充</p>
-<h3 id="需求管理-requirement-management">5. 需求管理 Requirement Management</h3>
-<h2 id="五.-软件需求与软件工程其他要素的关系">五. *软件需求与软件工程其他要素的关系</h2>
-<h2 id="六.-与需求工程有关的潜在风险">六. *与需求工程有关的潜在风险</h2>
-<h2 id="七.-需求获取方法">七. 需求获取方法</h2>
-<p><strong><em>需求获取的目标</em></strong></p>
+<h3 id="4-需求验证-Requirement-Verification"><a href="#4-需求验证-Requirement-Verification" class="headerlink" title="4. 需求验证 Requirement Verification"></a>4. 需求验证 Requirement Verification</h3><p>以需求规格说明为输入，通过评审、模拟或快速原型等途径，分析需求规格的正确性和可行性，发现存在的错误或缺陷并及时更改和补充</p>
+<h3 id="5-需求管理-Requirement-Management"><a href="#5-需求管理-Requirement-Management" class="headerlink" title="5. 需求管理 Requirement Management"></a>5. 需求管理 Requirement Management</h3><h2 id="五-软件需求与软件工程其他要素的关系"><a href="#五-软件需求与软件工程其他要素的关系" class="headerlink" title="五. *软件需求与软件工程其他要素的关系"></a>五. *软件需求与软件工程其他要素的关系</h2><h2 id="六-与需求工程有关的潜在风险"><a href="#六-与需求工程有关的潜在风险" class="headerlink" title="六. *与需求工程有关的潜在风险"></a>六. *与需求工程有关的潜在风险</h2><h2 id="七-需求获取方法"><a href="#七-需求获取方法" class="headerlink" title="七. 需求获取方法"></a>七. 需求获取方法</h2><p><em><strong>需求获取的目标</strong></em></p>
 <ul>
-<li><p>收集未来系统和正在使用的系统的信息，并从这些信息中提取用户和系统需求</p></li>
-<li><p>为下一步的需求分析提供素材</p></li>
+<li><p>收集未来系统和正在使用的系统的信息，并从这些信息中提取用户和系统需求</p>
+</li>
+<li><p>为下一步的需求分析提供素材</p>
+</li>
 </ul>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224165612582.png" alt="image-20211224165612582" style="zoom:80%;"></p>
-<h2 id="八.-需求获取所面临的挑战">八. 需求获取所面临的挑战</h2>
-<figure>
-<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224170300595.png" alt="image-20211224170300595"><figcaption aria-hidden="true">image-20211224170300595</figcaption>
-</figure>
-<h2 id="九.-需求获取技术">九. 需求获取技术</h2>
-<p>需求获取的关键：沟通和交流</p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224165612582.png" alt="image-20211224165612582" style="zoom:80%;">
+
+<h2 id="八-需求获取所面临的挑战"><a href="#八-需求获取所面临的挑战" class="headerlink" title="八. 需求获取所面临的挑战"></a>八. 需求获取所面临的挑战</h2><p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224170300595.png" alt="image-20211224170300595"></p>
+<h2 id="九-需求获取技术"><a href="#九-需求获取技术" class="headerlink" title="九. 需求获取技术"></a>九. 需求获取技术</h2><p>需求获取的关键：沟通和交流</p>
 <p>要避免的问题：交流障碍、沟通不全、意见冲突</p>
 <p>所要必备的条件：较高的技术水平、丰富的实践经验、较强的人际沟通能力</p>
-<h3 id="收集现有书面资料">1. 收集现有书面资料</h3>
-<ul>
+<h3 id="1-收集现有书面资料"><a href="#1-收集现有书面资料" class="headerlink" title="1. 收集现有书面资料"></a>1. 收集现有书面资料</h3><ul>
 <li>收集现有的报表、表格和过程描述</li>
 <li>收集现有的<strong>工作流程图</strong></li>
 <li>分发和收集需求<strong>调查表</strong></li>
 </ul>
-<h3 id="面对面访谈">2. 面对面访谈</h3>
-<p><strong>访谈问题分类</strong></p>
+<h3 id="2-面对面访谈"><a href="#2-面对面访谈" class="headerlink" title="2. 面对面访谈"></a>2. 面对面访谈</h3><p><strong>访谈问题分类</strong></p>
 <ul>
 <li>上下文无关的问题(context-free questions)：充分理解用户的问题，不涉及具体的解决方案</li>
 <li>解决方案相关的问题(solution-context questions)：通过这类问题，探寻特定的解决方案并得到用户认可</li>
 </ul>
-<h3 id="需求研讨会-workshop">3. 需求研讨会 Workshop</h3>
-<p>JAD会议室</p>
+<h3 id="3-需求研讨会-Workshop"><a href="#3-需求研讨会-Workshop" class="headerlink" title="3. 需求研讨会 Workshop"></a>3. 需求研讨会 Workshop</h3><p>JAD会议室</p>
 <p>联合应用设计会议(Joint Application Design, JAD)：让所有相关人员一起参加某个单一会议来定义需求或设计系统</p>
 <p>短暂而紧凑的时间，一般1至2天</p>
-<h3 id="现场观察体验">4. 现场观察/体验</h3>
-<p><strong>被动观察：用户实地工作，需求分析人员在旁边看</strong></p>
+<h3 id="4-现场观察-体验"><a href="#4-现场观察-体验" class="headerlink" title="4. 现场观察/体验"></a>4. 现场观察/体验</h3><p><strong>被动观察：用户实地工作，需求分析人员在旁边看</strong></p>
 <p><strong>主动体验：需求分析人员直接参与用户的实际工作</strong></p>
-<h3 id="头脑风暴">5. 头脑风暴</h3>
-<p>8-12人</p>
+<h3 id="5-头脑风暴"><a href="#5-头脑风暴" class="headerlink" title="5. 头脑风暴"></a>5. 头脑风暴</h3><p>8-12人</p>
 <p>适用场合：产品型系统，需要具有创新性特征，尚未投放市场，无明确的客户</p>
-<h2 id="十.-需求获取的主要内容">十. 需求获取的主要内容</h2>
-<p>对用户输入进行分类</p>
+<h2 id="十-需求获取的主要内容"><a href="#十-需求获取的主要内容" class="headerlink" title="十. 需求获取的主要内容"></a>十. 需求获取的主要内容</h2><p>对用户输入进行分类</p>
 <ul>
 <li>业务需求：描述客户可以从产品中得到的资金、市场或其它业务利润的需求</li>
 <li>业务规则：一些活动只能在特定的条件下，由一些特定的人来完成时，该用户可能在描述一个业务规则</li>
@@ -261,386 +240,390 @@ mjx-container[display="true"] + br {
 <li>约束条件</li>
 <li>数据定义</li>
 </ul>
-<h1 id="用户故事与用例建模">用户故事与用例建模</h1>
-<h2 id="一.-敏捷开发中的用户故事user-story">一. 敏捷开发中的“用户故事”（User Story）</h2>
-<h3 id="用户故事">1. 用户故事</h3>
-<p><strong><em>用户故事</em></strong>——对软件用户（或所有者）<strong>有价值的功能性的简明、书面描述</strong></p>
-<p><strong><em>从用户的角度来描述用户渴望得到的功能：</em></strong> <strong>角色</strong>（谁要使用这个功能）、<strong>目标/活动</strong>（需要完成什么样的功能）、<strong>商业价值</strong>（为什么需要这个功能，这个功能带来什么样的价值）</p>
-<p><strong><em>用户故事的三个组成部分</em></strong></p>
+<h1 id="用户故事与用例建模"><a href="#用户故事与用例建模" class="headerlink" title="用户故事与用例建模"></a>用户故事与用例建模</h1><h2 id="一-敏捷开发中的“用户故事”（User-Story）"><a href="#一-敏捷开发中的“用户故事”（User-Story）" class="headerlink" title="一. 敏捷开发中的“用户故事”（User Story）"></a>一. 敏捷开发中的“用户故事”（User Story）</h2><h3 id="1-用户故事"><a href="#1-用户故事" class="headerlink" title="1. 用户故事"></a>1. 用户故事</h3><p><em><strong>用户故事</strong></em>——对软件用户（或所有者）<strong>有价值的功能性的简明、书面描述</strong></p>
+<p><em><strong>从用户的角度来描述用户渴望得到的功能：</strong></em>  <strong>角色</strong>（谁要使用这个功能）、<strong>目标/活动</strong>（需要完成什么样的功能）、<strong>商业价值</strong>（为什么需要这个功能，这个功能带来什么样的价值）</p>
+<p><em><strong>用户故事的三个组成部分</strong></em></p>
 <ul>
 <li><strong>卡片 Card：</strong>用户故事一般在<strong>小卡片</strong>上写着故事的简短描述，工作估计量等</li>
 <li><strong>交谈 Conversation：</strong>用户故事背后的细节来源于和客户或者产品负责人的<strong>交流沟通</strong></li>
 <li><strong>确认 Confirmation：</strong>通过<strong>验收测试</strong>确认用户故事被正确完成</li>
 </ul>
 <p><strong>用户故事板</strong></p>
-<figure>
-<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224173417141.png" alt="image-20211224173417141"><figcaption aria-hidden="true">image-20211224173417141</figcaption>
-</figure>
-<p><strong><em>用户故事的描述：角色、功能、价值，</em></strong>（作为一个&lt;角色&gt;，我想要&lt;活动&gt;，以便于&lt;商业价值&gt;）</p>
-<h3 id="invest-好的用户故事应具备的特征">2. INVEST 好的用户故事应具备的特征</h3>
-<ul>
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224173417141.png" alt="image-20211224173417141"></p>
+<p><em><strong>用户故事的描述：角色、功能、价值，</strong></em>（作为一个&lt;角色&gt;，我想要&lt;活动&gt;，以便于&lt;商业价值&gt;）</p>
+<h3 id="2-INVEST-好的用户故事应具备的特征"><a href="#2-INVEST-好的用户故事应具备的特征" class="headerlink" title="2. INVEST 好的用户故事应具备的特征"></a>2. INVEST 好的用户故事应具备的特征</h3><ul>
 <li><strong>Independent 尽可能独立</strong></li>
 <li><strong>Negotiable 可讨论的：</strong>不是合同、没有详细规约，后续开发阶段可以不断协商和改进</li>
 <li><strong>Valuable 对用户/客户有价值：</strong>用户可理解的语言，是系统”特性“而不是”开发任务“</li>
 <li><strong>Estimable 工作量可估算</strong></li>
 <li><strong>Small 小</strong></li>
-<li><strong>Testable 可测试的</strong>
-<ul>
+<li><strong>Testable 可测试的</strong><ul>
 <li>对应敏捷开发的一个基本思想：<strong>写代码之前先写测试（Test-Driven Development, TDD）</strong></li>
-</ul></li>
 </ul>
-<h3 id="用户故事支持敏捷迭代计划">3. 用户故事支持敏捷迭代计划</h3>
-<p>一个用户故事，使用Story Point（故事点，一个达到共识的基本时间单位，例如1天）估算工作量</p>
+</li>
+</ul>
+<h3 id="3-用户故事支持敏捷迭代计划"><a href="#3-用户故事支持敏捷迭代计划" class="headerlink" title="3. 用户故事支持敏捷迭代计划"></a>3. 用户故事支持敏捷迭代计划</h3><p>一个用户故事，使用Story Point（故事点，一个达到共识的基本时间单位，例如1天）估算工作量</p>
 <p>团队成员分别估计，差异较大时面对面讨论，发现分歧，形成共识</p>
 <p>形成故事清单</p>
 <p>对用户故事排列优先级</p>
 <p>安排负责人</p>
 <p>汇聚为迭代计划并发布</p>
 <p>开发过程中监控进度</p>
-<h2 id="二.-面向对象方法中的用例use-case">二. 面向对象方法中的“用例”（Use Case）</h2>
-<h3 id="用例-use-case">1. 用例 Use Case</h3>
-<p>用例：表示系统所提供的服务或可执行的某种行为，定义了系统是如何被参与者所使用，描述了参与者为了使用系统所提供的某一完整功能而与系统之间发生的一段”对话“。</p>
+<h2 id="二-面向对象方法中的“用例”（Use-Case）"><a href="#二-面向对象方法中的“用例”（Use-Case）" class="headerlink" title="二. 面向对象方法中的“用例”（Use Case）"></a>二. 面向对象方法中的“用例”（Use Case）</h2><h3 id="1-用例-Use-Case"><a href="#1-用例-Use-Case" class="headerlink" title="1. 用例 Use Case"></a>1. 用例 Use Case</h3><p>用例：表示系统所提供的服务或可执行的某种行为，定义了系统是如何被参与者所使用，描述了参与者为了使用系统所提供的某一完整功能而与系统之间发生的一段”对话“。</p>
 <p>用例：站在用户角度定义软件系统的外部特征。</p>
-<p><strong><em>四大特性</em></strong></p>
+<p><em><strong>四大特性</strong></em></p>
 <ul>
 <li><strong>行为序列：</strong>一个用例由一组可产生某些特定结果的行为构成，这些行为是<strong>不可分解的</strong></li>
 <li><strong>系统执行：</strong>系统为外部角色提供服务</li>
 <li><strong>可观测到的、有价值的结果：</strong>用例必须对用户产生价值</li>
 <li><strong>特定角色：</strong>某人、某台设备、某外部系统等等，能够触发某些行为</li>
 </ul>
-<h3 id="用例方法的基本思想">2. 用例方法的基本思想</h3>
-<p><strong><em><u>完全站在用户的角度上，从系统外部来描述功能</u></em></strong></p>
+<h3 id="2-用例方法的基本思想"><a href="#2-用例方法的基本思想" class="headerlink" title="2. 用例方法的基本思想"></a>2. 用例方法的基本思想</h3><p><em><strong><u>完全站在用户的角度上，从系统外部来描述功能</u></strong></em></p>
 <p>从<strong>用户的角度</strong>来看，他们并<strong>不想了解系统的内部结构和设计</strong>，他们所关心的是<strong>系统所能提供的服务</strong>，也就是被开发出来的系统将是如何被使用的</p>
-<p><strong><em>用例模型的元素构成</em></strong></p>
+<p><em><strong>用例模型的元素构成</strong></em></p>
 <ul>
 <li><strong>参与者 Actor：</strong>系统外部，与系统发生交互的人或其他系统，代表系统的使用者或使用环境</li>
 <li><strong>用例 Use Case：</strong>代表系统所提供的服务或可执行的某种行为</li>
 <li><strong>通讯关系 Communication Association：</strong>参与者与用例之间的对应关系，表示参与者使用了系统中哪些用例、系统所提供的服务（用例）是被哪些参与者使用的（不表示在参与者和用例之间的信息流）</li>
 </ul>
-<h2 id="三.-用例建模的基本过程">三. 用例建模的基本过程</h2>
-<ul>
-<li><p><strong><em>Step 1：识别并描述参与者(actor)；</em></strong></p>
+<h2 id="三-用例建模的基本过程"><a href="#三-用例建模的基本过程" class="headerlink" title="三. 用例建模的基本过程"></a>三. 用例建模的基本过程</h2><ul>
+<li><p><em><strong>Step 1：识别并描述参与者(actor)；</strong></em></p>
 <ul>
 <li>使用、获取提供信息、访问外部硬件、维护管理此系统、系统交互</li>
 <li>特殊的参与者：<strong>系统时钟</strong>（定时操作，从逻辑上，这一参与者应该被理解成是系统外部的，由它来触发系统所提供的用例对话）</li>
-</ul></li>
-<li><p><strong><em>Step 2：识别用例(use case)，并给出简要描述；</em></strong></p>
+</ul>
+</li>
+<li><p><em><strong>Step 2：识别用例(use case)，并给出简要描述；</strong></em></p>
 <ul>
 <li>根据参与者确认系统的用例，看各参与者需要系统提供什么样的服务</li>
 <li>注意事项：每个用例至少涉及一个actor，每个参与者也必须至少涉及一个用例</li>
-</ul></li>
-<li><p><strong><em>Step 3：识别参与者与角色之间的通讯关联(Association)；</em></strong></p></li>
-<li><p><strong><em>Step 4：给出每一个用例的详细描述</em></strong></p>
+</ul>
+</li>
+<li><p><em><strong>Step 3：识别参与者与角色之间的通讯关联(Association)；</strong></em></p>
+</li>
+<li><p><em><strong>Step 4：给出每一个用例的详细描述</strong></em></p>
 <ul>
 <li>单纯的用例图不能描述完整的信息，需要用<strong>文字描述</strong>不能反映在图形上的信息</li>
-<li><strong>事件流</strong>：数字编号表明步骤，简短概况每一步主要内容（参与者提交信息、系统响应）
-<ul>
+<li><strong>事件流</strong>：数字编号表明步骤，简短概况每一步主要内容（参与者提交信息、系统响应）<ul>
 <li><strong>常规事件流：</strong>描述该用例<strong>最正常的一种场景</strong>，系统执行一系列活动步骤来响应参与者提出的服务请求</li>
 <li><strong>备选事件流：</strong>负责描述用例执行过程中<strong>异常的或偶尔发生</strong>的一些情况</li>
-<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224184254367.png" title="fig:" alt="image-20211224184254367"></li>
-</ul></li>
-</ul></li>
-<li><p><strong><em>Step 5：细化用例模型</em></strong></p>
+<li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224184254367.png" alt="image-20211224184254367"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><em><strong>Step 5：细化用例模型</strong></em></p>
 <ul>
 <li>参与者与参与者之间的泛化</li>
 <li>用例与用例之间的包含&lt;<include>&gt;</include></li>
 <li>用例与用例之间的扩展&lt;<extend>&gt;（<strong>实际上相当于一个用例的“备选流”</strong>）</extend></li>
 <li>用例与用例之间的泛化（子用例继承了父用例所有的结构、行为和关系）</li>
 </ul>
-<p>利用这些关系来调整已有的用例模型，把一些公共的信息抽取出来复用，使得用例模型更易于维护</p></li>
+<p>利用这些关系来调整已有的用例模型，把一些公共的信息抽取出来复用，使得用例模型更易于维护</p>
+</li>
 </ul>
-<p><strong><em>需要注意的问题</em></strong></p>
+<p><em><strong>需要注意的问题</strong></em></p>
 <ul>
-<li><strong><em>用例的粒度</em></strong>
-<ul>
-<li><strong><u>用例识别的标准：actor与系统之间的一次独立交互</u></strong>，多次交互同时且不会单独发生可以合并为一个用例</li>
+<li><em><strong>用例的粒度</strong></em><ul>
+<li>**<u>用例识别的标准：actor与系统之间的一次独立交互</u>**，多次交互同时且不会单独发生可以合并为一个用例</li>
 <li>用例也可称为user story，将来使用时可看作一个独立存在的功能体</li>
 <li>用例过大，可以拆分</li>
-</ul></li>
-<li><strong><em>用例是actor与系统的交互</em></strong>
-<ul>
-<li>actor对系统的请求，系统对actor的请求</li>
-<li><strong><u>actor与actor在现实当中的交互不应包含在use case中</u></strong>，如讨价还价、处理纠纷</li>
-</ul></li>
-<li><strong><em>actor与系统的区分</em></strong>
-<ul>
-<li><strong><u>系统自己做的事情，不是单独的用例</u></strong>：系统的行为受到actor的触发(可能是系统时钟)</li>
-</ul></li>
 </ul>
-<h2 id="四.-用例模型的提交物">四. 用例模型的提交物</h2>
-<ol type="1">
-<li><p><strong>用例模型</strong></p></li>
-<li><p>每个用例的<strong>详细描述</strong></p></li>
-<li><p><strong>术语表</strong>：所用到的术语说明</p></li>
-<li><p><strong>补充规约</strong>：非功能性需求的说明</p></li>
+</li>
+<li><em><strong>用例是actor与系统的交互</strong></em><ul>
+<li>actor对系统的请求，系统对actor的请求</li>
+<li>**<u>actor与actor在现实当中的交互不应包含在use case中</u>**，如讨价还价、处理纠纷</li>
+</ul>
+</li>
+<li><em><strong>actor与系统的区分</strong></em><ul>
+<li>**<u>系统自己做的事情，不是单独的用例</u>**：系统的行为受到actor的触发(可能是系统时钟)</li>
+</ul>
+</li>
+</ul>
+<h2 id="四-用例模型的提交物"><a href="#四-用例模型的提交物" class="headerlink" title="四. 用例模型的提交物"></a>四. 用例模型的提交物</h2><ol>
+<li><p> <strong>用例模型</strong></p>
+</li>
+<li><p> 每个用例的<strong>详细描述</strong></p>
+</li>
+<li><p> <strong>术语表</strong>：所用到的术语说明</p>
+</li>
+<li><p><strong>补充规约</strong>：非功能性需求的说明</p>
+</li>
 </ol>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224185431999.png" alt="image-20211224185431999" style="zoom:80%;"></p>
-<h2 id="五.-活动图-泳道图">五. 活动图 &amp; 泳道图</h2>
-<p>活动图（Activity Diagram）提供一种可视化的流程图方式，<strong>对use case的事件流进行直观展示</strong>（同时，活动图也可以用来描述多个用例之间所形成的大粒度流程）</p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224185431999.png" alt="image-20211224185431999" style="zoom:80%;">
+
+<h2 id="五-活动图-amp-泳道图"><a href="#五-活动图-amp-泳道图" class="headerlink" title="五. 活动图 &amp; 泳道图"></a>五. 活动图 &amp; 泳道图</h2><p>活动图（Activity Diagram）提供一种可视化的流程图方式，<strong>对use case的事件流进行直观展示</strong>（同时，活动图也可以用来描述多个用例之间所形成的大粒度流程）</p>
 <p>泳道图（swim-lane diagram）：侧重于描述多个<strong>参与者的活动之间</strong>的交互关系</p>
-<h1 id="需求的结构化分析">需求的结构化分析</h1>
-<h2 id="一.-结构化方法vs面向对象方法">一. 结构化方法vs面向对象方法</h2>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224185949793.png" alt="image-20211224185949793" style="zoom:80%;"></p>
+<h1 id="需求的结构化分析"><a href="#需求的结构化分析" class="headerlink" title="需求的结构化分析"></a>需求的结构化分析</h1><h2 id="一-结构化方法vs面向对象方法"><a href="#一-结构化方法vs面向对象方法" class="headerlink" title="一. 结构化方法vs面向对象方法"></a>一. 结构化方法vs面向对象方法</h2><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224185949793.png" alt="image-20211224185949793" style="zoom:80%;">
+
 <p>结构化方法：从功能的观点设计系统，自顶向下、分而治之，将大系统分解为若干模块</p>
 <p>面向对象方法：自底向上，先考虑对象，再考虑关系</p>
 <p>基于UML的面向对象方法：开发一整套系统分析与设计模型及描述方法，从形式上和概念上统一描述软件系统</p>
-<h2 id="二.-需求的结构化分析方法">二. 需求的结构化分析方法</h2>
-<p><strong><em>结构化分析方法（SA）：</em></strong>将待解决的问题看作一个系统，从而用系统科学的思想方法(抽象、分解、模块化)来分析和解决问题（核心思想：自顶向下的分解）</p>
-<p><strong><em>结构化分析</em></strong>：帮助开发人员定义系统需要做什么（处理需求），系统需要存储和使用哪些数据（数据需求），系统需要什么样的输入和输出以及如何把这些功能结合在一起来完成任务</p>
+<h2 id="二-需求的结构化分析方法"><a href="#二-需求的结构化分析方法" class="headerlink" title="二. 需求的结构化分析方法"></a>二. 需求的结构化分析方法</h2><p><em><strong>结构化分析方法（SA）：</strong></em>将待解决的问题看作一个系统，从而用系统科学的思想方法(抽象、分解、模块化)来分析和解决问题（核心思想：自顶向下的分解）</p>
+<p><em><strong>结构化分析</strong></em>：帮助开发人员定义系统需要做什么（处理需求），系统需要存储和使用哪些数据（数据需求），系统需要什么样的输入和输出以及如何把这些功能结合在一起来完成任务</p>
 <ul>
 <li><strong>基于数据流的需求分析建模——DFD</strong></li>
 <li><strong>数据分析建模——ERD/IDEF1X</strong></li>
 </ul>
-<h2 id="三.-数据流图dfd-data-flow-diagram">三. 数据流图（DFD, Data Flow Diagram）</h2>
-<p><strong>数据流图：</strong>用处理、外部实体、数据流以及数据存储来表示系统需求的图表</p>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224193853214.png" alt="image-20211224193853214" style="zoom:80%;"></p>
+<h2 id="三-数据流图（DFD-Data-Flow-Diagram）"><a href="#三-数据流图（DFD-Data-Flow-Diagram）" class="headerlink" title="三. 数据流图（DFD, Data Flow Diagram）"></a>三. 数据流图（DFD, Data Flow Diagram）</h2><p><strong>数据流图：</strong>用处理、外部实体、数据流以及数据存储来表示系统需求的图表</p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224193853214.png" alt="image-20211224193853214" style="zoom:80%;">
+
 <p>DFD图可以描述高层次的<strong>具有高度概括</strong>的系统处理，也可以描述低层次的具有<strong>更详细分解</strong>的系统处理</p>
 <p><strong>抽象层次：</strong>把系统分解成一个<strong>逐步细化</strong>的分层集合的建模技术</p>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224194214455.png" alt="image-20211224194214455" style="zoom:80%;"></p>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224194445652.png" alt="image-20211224194445652" style="zoom:80%;"></p>
-<h3 id="关联dfd图">1. 关联DFD图</h3>
-<p>关联图：在<strong><em>单个处理</em></strong>符号中概括系统内所有处理活动的DFD</p>
-<p>表示<strong><em>系统边界</em></strong>时用处很大</p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224194214455.png" alt="image-20211224194214455" style="zoom:80%;">
+
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224194445652.png" alt="image-20211224194445652" style="zoom:80%;">
+
+
+
+<h3 id="1-关联DFD图"><a href="#1-关联DFD图" class="headerlink" title="1. 关联DFD图"></a>1. 关联DFD图</h3><p>关联图：在<em><strong>单个处理</strong></em>符号中概括系统内所有处理活动的DFD</p>
+<p>表示<em><strong>系统边界</strong></em>时用处很大</p>
 <p><strong>系统的范围是通过单个的处理和外部实体所表示的事物来定义的</strong></p>
 <p><strong><u>数据存储不画在关联图中</u>是因为它本身被认为是<u>系统内部的内容</u></strong></p>
 <p>当一个系统响应事件较多时，常常将系统分成多个<strong>子系统</strong>，并为每个子系统创建一张关联图</p>
-<h3 id="dfd片段">2. DFD片段</h3>
-<p>DFD片段：用一个<strong><em>单一处理符号</em></strong>表示系统响应<strong><em>一个事件</em></strong>的DFD</p>
+<h3 id="2-DFD片段"><a href="#2-DFD片段" class="headerlink" title="2. DFD片段"></a>2. DFD片段</h3><p>DFD片段：用一个<em><strong>单一处理符号</strong></em>表示系统响应<em><strong>一个事件</strong></em>的DFD</p>
 <p>展示了<strong>处理、外部实体和内部数据存储</strong>之间的交互细节</p>
-<h3 id="dfd的层次">3. DFD的层次</h3>
-<p>一个系统或子系统的所有DFD片段组合到一个单个的DFD图中，这样的DFD图称为<strong>事件分离的系统模型/0层图</strong></p>
+<h3 id="3-DFD的层次"><a href="#3-DFD的层次" class="headerlink" title="3. DFD的层次"></a>3. DFD的层次</h3><p>一个系统或子系统的所有DFD片段组合到一个单个的DFD图中，这样的DFD图称为<strong>事件分离的系统模型/0层图</strong></p>
 <p>分解”处理“——理解”处理“的细节（）</p>
 <p>0层DFD图编号：i</p>
 <p>1层DFD图编号：i.j</p>
 <p>2层DFD图编号：i.j.k</p>
-<h3 id="dfd的质量评估">4. DFD的质量评估</h3>
-<p>高质量DFD：可读性强、内部一致、能够准确描述系统需求</p>
+<h3 id="4-DFD的质量评估"><a href="#4-DFD的质量评估" class="headerlink" title="4. DFD的质量评估"></a>4. DFD的质量评估</h3><p>高质量DFD：可读性强、内部一致、能够准确描述系统需求</p>
 <p>措施：最小化复杂度，保证数据流一致性</p>
-<p><strong><em><u>最小化复杂度</u></em></strong></p>
+<p><em><strong><u>最小化复杂度</u></strong></em></p>
 <ul>
 <li>每幅DFD图尽量简单易懂，避免信息超量——太多信息同时显示时所发生的难以理解的情况</li>
 <li>采用<strong>分层结构</strong>将DFD划分为小的且相对独立的子集</li>
 <li>构造<strong>DFD图的7±2规则</strong>（单个DFD不超过7±2个处理、不超过7±2个数据量进出同一个处理/数据存储）</li>
 <li><strong>接口最小化</strong>：DFD各个元素之间的连接越少越好（低耦合）</li>
 </ul>
-<p><strong><em><u>保证数据流一致性</u></em></strong></p>
+<p><em><strong><u>保证数据流一致性</u></strong></em></p>
 <ul>
 <li>一个”处理“和该”处理“被详细分解后在数据流内容上应该一致</li>
 <li>对一个”处理“，有数据流入则必须有相应的数据流出</li>
 <li>对一个”处理“，有数据流出则必须有相应的数据流入</li>
 </ul>
-<p><strong><em><u>黑洞</u></em></strong></p>
-<p><strong><em>带有输入数据但不用其产生输出数据的处理或数据存储（有入无出）</em></strong></p>
-<p><strong><em><u>奇迹</u></em></strong></p>
-<p><strong><em>没有足够数据元素作为输入或产生来源的一个处理或数据存储（无足够入，包括无入）</em></strong></p>
-<p><strong><em><u>数据流典型错误</u></em></strong></p>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224214811037.png" alt="image-20211224214811037" style="zoom:80%;"></p>
-<p><strong><em><u>总结</u></em></strong></p>
+<p><em><strong><u>黑洞</u></strong></em></p>
+<p><em><strong>带有输入数据但不用其产生输出数据的处理或数据存储（有入无出）</strong></em></p>
+<p><em><strong><u>奇迹</u></strong></em></p>
+<p><em><strong>没有足够数据元素作为输入或产生来源的一个处理或数据存储（无足够入，包括无入）</strong></em></p>
+<p><em><strong><u>数据流典型错误</u></strong></em></p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224214811037.png" alt="image-20211224214811037" style="zoom:80%;">
+
+<p><em><strong><u>总结</u></strong></em></p>
 <ul>
 <li>关联图中不画数据存储</li>
 <li>数据流不反应处理顺序，显示数据通过系统的流程，因此”处理“可以并行工作</li>
 <li>”处理/数据存储“既要有输入，又有输出（黑洞、奇迹）</li>
 </ul>
-<h3 id="dfd细节内容">5. DFD细节内容</h3>
-<p>在传统方法中，DFD图在一个图中描述了三种元素：</p>
+<h3 id="5-DFD细节内容"><a href="#5-DFD细节内容" class="headerlink" title="5. DFD细节内容"></a>5. DFD细节内容</h3><p>在传统方法中，DFD图在一个图中描述了三种元素：</p>
 <ul>
-<li><p>处理——每个最底层“处理”需要详细描述其细节</p></li>
-<li><p>数据流——”数据流”包含的数据元素需要定义</p></li>
-<li><p>数据存储——<strong>“数据存储”需要在ERD中定义</strong></p></li>
+<li><p>处理——每个最底层“处理”需要详细描述其细节</p>
+</li>
+<li><p>数据流——”数据流”包含的数据元素需要定义</p>
+</li>
+<li><p>数据存储——<strong>“数据存储”需要在ERD中定义</strong></p>
+</li>
 </ul>
-<p><strong><em>数据流和数据存储就是狭义的数据字典DD</em></strong></p>
-<p><strong><em>处理的细节描述</em></strong></p>
+<p><em><strong>数据流和数据存储就是狭义的数据字典DD</strong></em></p>
+<p><em><strong>处理的细节描述</strong></em></p>
 <ul>
 <li>处理细分解、层层分解</li>
-<li>结构化语言/伪代码
-<ul>
+<li>结构化语言/伪代码<ul>
 <li>结构化语言：自然语言和形式语言之间的语言（短句、多层缩进、无确定语法、可分层和嵌套、结构化编程技术和叙述性语言结合）</li>
 <li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224220259810.png" alt="image-20211224220259810" style="zoom:80%;"></li>
-</ul></li>
+</ul>
+</li>
 <li>决策表/决策树</li>
 </ul>
-<h2 id="四.-数据字典dd">四. 数据字典（DD）</h2>
-<p>数据字典是数据分析的描述模型，包括：<strong>数据项定义、数据结构定义、数据流描述、数据存储描述</strong></p>
+<h2 id="四-数据字典（DD）"><a href="#四-数据字典（DD）" class="headerlink" title="四. 数据字典（DD）"></a>四. 数据字典（DD）</h2><p>数据字典是数据分析的描述模型，包括：<strong>数据项定义、数据结构定义、数据流描述、数据存储描述</strong></p>
 <ul>
-<li><strong>数据项</strong>定义：定义特定数据项的<strong>组成和意义</strong>
-<ul>
+<li><strong>数据项</strong>定义：定义特定数据项的<strong>组成和意义</strong><ul>
 <li>数据项是<strong>数据的基本单位</strong></li>
 <li>包含：数据项名、数据项说明、数据类型、长度、取值范围、语法定义、与其他数据项的关联</li>
-</ul></li>
-<li><strong>数据结构</strong>定义：定义有数据项组成的<strong>表达数据的基本数据</strong>
-<ul>
+</ul>
+</li>
+<li><strong>数据结构</strong>定义：定义有数据项组成的<strong>表达数据的基本数据</strong><ul>
 <li>数据结构由<strong>数据项构成</strong>，是<strong>数据基本结构单位</strong></li>
 <li>包含：数据结构名、数据结构说明、数据结构组成：{数据项/数据结构}、数据结构约束</li>
-</ul></li>
-<li><strong>数据流</strong>描述：描述数据流的数据<strong>构成</strong>，并指明其<strong>来源或去向</strong>
-<ul>
+</ul>
+</li>
+<li><strong>数据流</strong>描述：描述数据流的数据<strong>构成</strong>，并指明其<strong>来源或去向</strong><ul>
 <li>数据流是数据结构在<strong>系统中的流通途径</strong></li>
 <li>包含：数据流名、数据流说明、来源、去向、组成：{数据结构}、平均流量、高峰流量</li>
 <li>数据流是数据元素的集合，数据流定义就是列出其包含的所有数据项</li>
 <li>数据元素还需进一步的定义：说明类型、长度等，一般在设计阶段详细定义</li>
 <li>代数公式方式定义数据流<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224221847733.png" alt="image-20211224221847733" style="zoom:50%;"></li>
-</ul></li>
-<li><strong>数据存储</strong>描述：描述保存在<strong>存储介质</strong>上的<strong>数据文件或数据库表的格式和内容</strong>（颗粒度比数据项和数据结构大）
-<ul>
+</ul>
+</li>
+<li><strong>数据存储</strong>描述：描述保存在<strong>存储介质</strong>上的<strong>数据文件或数据库表的格式和内容</strong>（颗粒度比数据项和数据结构大）<ul>
 <li>数据存储：数据结构<strong>保存或停留</strong>之处，<strong>数据文件或数据库表</strong></li>
 <li>包含：数据存储名、数据存储说明、输入的数据流、输出的数据流、数据存储组成：{数据结构}、数据量、存储频度、存储方式</li>
-</ul></li>
-<li><strong><em>广义的数据字典也包含对”处理“的描述。</em></strong>
+</ul>
+</li>
+</ul>
 <ul>
+<li><em><strong>广义的数据字典也包含对”处理“的描述。</strong></em><ul>
 <li>数据处理：给出处理的流程和说明信息</li>
 <li>包含：数据处理名、数据处理说明、输入数据：{数据结构}、输出数据：{数据结构}、处理过程简要描述</li>
-</ul></li>
 </ul>
-<h2 id="五.-数据分析erdidef1x什么区别">五. 数据分析（ERD、IDEF1X）什么区别？？？？</h2>
-<h3 id="实体关系图erd">1. 实体关系图——ERD</h3>
-<ul>
-<li><p><strong>传统的系统开发方法都将重点集中在数据存储需求上</strong></p></li>
-<li><p><strong>数据存储需求包括数据实体、数据实体的属性以及它们之间的关系</strong></p></li>
+</li>
 </ul>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224222532502.png" alt="image-20211224222532502" style="zoom:80%;"></p>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224222633420.png" alt="image-20211224222633420" style="zoom:80%;"></p>
-<h3 id="实体关系图idef1x">2. 实体关系图——IDEF1X</h3>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224222650590.png" alt="image-20211224222650590" style="zoom: 67%;"></p>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224222701857.png" alt="image-20211224222701857" style="zoom:80%;"></p>
-<h1 id="面向对象的分析">面向对象的分析</h1>
-<h2 id="一.-面向对象的分析方法概述">一. 面向对象的分析方法概述</h2>
-<h3 id="需求分析的本质">1. 需求分析的本质</h3>
-<p><strong><em>需求分析(Requirement Analysis)</em></strong>：对收集到的需求进行提炼、分析和审查，为最终用户所看到的系统建立<strong><em>概念化的分析模型</em></strong></p>
-<p><strong><em>本质：</em></strong><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224232625742.png" alt="image-20211224232625742" style="zoom:67%;"></p>
+<h2 id="五-数据分析（ERD、IDEF1X）什么区别？？？？"><a href="#五-数据分析（ERD、IDEF1X）什么区别？？？？" class="headerlink" title="五. 数据分析（ERD、IDEF1X）什么区别？？？？"></a>五. 数据分析（ERD、IDEF1X）什么区别？？？？</h2><h3 id="1-实体关系图——ERD"><a href="#1-实体关系图——ERD" class="headerlink" title="1. 实体关系图——ERD"></a>1. 实体关系图——ERD</h3><ul>
+<li><p><strong>传统的系统开发方法都将重点集中在数据存储需求上</strong></p>
+</li>
+<li><p><strong>数据存储需求包括数据实体、数据实体的属性以及它们之间的关系</strong></p>
+</li>
+</ul>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224222532502.png" alt="image-20211224222532502" style="zoom:80%;">
+
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224222633420.png" alt="image-20211224222633420" style="zoom:80%;">
+
+<h3 id="2-实体关系图——IDEF1X"><a href="#2-实体关系图——IDEF1X" class="headerlink" title="2. 实体关系图——IDEF1X"></a>2. 实体关系图——IDEF1X</h3><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224222650590.png" alt="image-20211224222650590" style="zoom: 67%;">
+
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224222701857.png" alt="image-20211224222701857" style="zoom:80%;">
+
+<h1 id="面向对象的分析"><a href="#面向对象的分析" class="headerlink" title="面向对象的分析"></a>面向对象的分析</h1><h2 id="一-面向对象的分析方法概述"><a href="#一-面向对象的分析方法概述" class="headerlink" title="一. 面向对象的分析方法概述"></a>一. 面向对象的分析方法概述</h2><h3 id="1-需求分析的本质"><a href="#1-需求分析的本质" class="headerlink" title="1. 需求分析的本质"></a>1. 需求分析的本质</h3><p><em><strong>需求分析(Requirement Analysis)<em><strong>：对收集到的需求进行提炼、分析和审查，为最终用户所看到的系统建立</strong></em>概念化的分析模型</strong></em></p>
+<p><em><strong>本质：</strong></em><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224232625742.png" alt="image-20211224232625742" style="zoom:67%;"></p>
 <p>分析模型的目标：描述客户需要什么（软件的信息、功能和行为），为软件设计奠定基础（结构、接口、软件设计），定义软件完成后可以被确认的一组需求</p>
-<p><strong><em>需求分析的基本思想：</em></strong></p>
+<p><em><strong>需求分析的基本思想：</strong></em></p>
 <ul>
-<li><strong><em>抽象</em></strong>——透过现象看本质（具体事物中发现其本质性特征和方法的过程）</li>
-<li><strong><em>分治</em></strong>——分而治之，整体/部分关系，降低问题复杂性</li>
-<li><strong><em>投影</em></strong>——不同视角看问题</li>
-<li><strong><em>建模</em></strong>——需求描述模型化（形式化的数学模型、非形式化的图形化模型）</li>
+<li><em><strong>抽象</strong></em>——透过现象看本质（具体事物中发现其本质性特征和方法的过程）</li>
+<li><em><strong>分治</strong></em>——分而治之，整体/部分关系，降低问题复杂性</li>
+<li><em><strong>投影</strong></em>——不同视角看问题</li>
+<li><em><strong>建模</strong></em>——需求描述模型化（形式化的数学模型、非形式化的图形化模型）</li>
 </ul>
-<h3 id="面向对象分析">2. 面向对象分析</h3>
-<p><strong><em><u>面向对象的分析模型由三个独立的模型构成：</u></em></strong>如下图所示，功能模型——<strong>用例</strong>模型，静态结构模型——<strong>类图</strong>（系统概念实体），动态行为模型——<strong>时序图和协作图</strong>。箭头表示驱动，或者说画图顺序。</p>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224234844834.png" alt="image-20211224234844834" style="zoom:67%;"></p>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224234858228.png" alt="image-20211224234858228" style="zoom:80%;"></p>
-<p><strong><em><u>面向对象分析的过程</u></em></strong></p>
+<h3 id="2-面向对象分析"><a href="#2-面向对象分析" class="headerlink" title="2. 面向对象分析"></a>2. 面向对象分析</h3><p><strong>*<u>面向对象的分析模型由三个独立的模型构成：</u><em><strong>如下图所示，功能模型——</strong>用例</em>*模型，静态结构模型——</strong>类图<strong>（系统概念实体），动态行为模型——</strong>时序图和协作图**。箭头表示驱动，或者说画图顺序。</p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224234844834.png" alt="image-20211224234844834" style="zoom:67%;">
+
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211224234858228.png" alt="image-20211224234858228" style="zoom:80%;">
+
+<p><em><strong><u>面向对象分析的过程</u></strong></em></p>
 <ul>
-<li>第一阶段：<strong><em>业务领域</em></strong>分析：业务范围，确定系统<strong><em>边界</em></strong>，确定系统需求——用例模型</li>
-<li>第二阶段：发现和定义<strong><em>对象和类</em></strong>：确定内部特征（属性和服务操作），现实到概念模型的<strong>抽象</strong></li>
-<li>第三阶段：<strong><em>识别对象的外部联系</em></strong>：识别对象与对象、类与类之间的各种外部联系</li>
-<li>第四阶段：<strong><em>建立系统的静态结构模型</em></strong>：图形和文字，如绘制<strong>类图、对象图、系统与子系统结构图</strong>等，编制相应的说明文档</li>
-<li>第五阶段：<strong><em>建立系统的动态行为模型</em></strong>：图形和文字，如绘制<strong>活动图、交互图、状态图</strong>等，编制相应的说明文档</li>
+<li>第一阶段：<em><strong>业务领域</strong></em>分析：业务范围，确定系统<em><strong>边界</strong></em>，确定系统需求——用例模型</li>
+<li>第二阶段：发现和定义<em><strong>对象和类</strong></em>：确定内部特征（属性和服务操作），现实到概念模型的<strong>抽象</strong></li>
+<li>第三阶段：<em><strong>识别对象的外部联系</strong></em>：识别对象与对象、类与类之间的各种外部联系</li>
+<li>第四阶段：<em><strong>建立系统的静态结构模型</strong></em>：图形和文字，如绘制<strong>类图、对象图、系统与子系统结构图</strong>等，编制相应的说明文档</li>
+<li>第五阶段：<em><strong>建立系统的动态行为模型</strong></em>：图形和文字，如绘制<strong>活动图、交互图、状态图</strong>等，编制相应的说明文档</li>
 </ul>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211225000315441.png" alt="image-20211225000315441" style="zoom: 67%;"></p>
-<h2 id="二.-建立静态结构模型">二. 建立静态结构模型</h2>
-<p><strong><em>分析类</em></strong></p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211225000315441.png" alt="image-20211225000315441" style="zoom: 67%;">
+
+<h2 id="二-建立静态结构模型"><a href="#二-建立静态结构模型" class="headerlink" title="二. 建立静态结构模型"></a>二. 建立静态结构模型</h2><p><em><strong>分析类</strong></em></p>
 <ul>
 <li>分析类是概念层次上的内容，用于描述系统中较高层次的对象</li>
 <li>分析类直接与<strong>应用逻辑相关</strong>，而不关注技术实现的问题</li>
-<li>分析类的类型：
-<ul>
-<li><strong>实体类：表示系统存储和管理的持久性信息</strong>
-<ul>
+<li>分析类的类型：<ul>
+<li><strong>实体类：表示系统存储和管理的持久性信息</strong><ul>
 <li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211225000958185.png" alt="image-20211225000958185" style="zoom:67%;"><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211225002807023.png" alt="image-20211225002807023" style="zoom:67%;"></li>
 <li><strong>必须存贮的信息及其相关行为</strong>，通常这些信息需要长久保存</li>
 <li><strong>对应现实世界中的事物</strong></li>
 <li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211225002923933.png" alt="image-20211225002923933" style="zoom:67%;"></li>
-</ul></li>
-<li><strong>边界类：表示参与者与系统之间的交互</strong>
-<ul>
+</ul>
+</li>
+<li><strong>边界类：表示参与者与系统之间的交互</strong><ul>
 <li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211225001009933.png" alt="image-20211225001009933" style="zoom:67%;"><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211225002015607.png" alt="image-20211225002015607" style="zoom:67%;"></li>
 <li>将用例的<strong>内部逻辑与外部环境进行隔离</strong>，使得外界的变化不会影响到内部的逻辑部分</li>
-<li>类型：用户界面、系统接口、设备接口
-<ul>
+<li>类型：用户界面、系统接口、设备接口<ul>
 <li>对用户界面来说：用户与<strong>系统的交互信息</strong>，而不是用户界面的显示形式（按钮、菜单等）</li>
 <li>对系统接口/设备接口来说：描述<strong>通信协议</strong>，不必说明协议如何实现</li>
-</ul></li>
+</ul>
+</li>
 <li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211225002227636.png" alt="image-20211225002227636" style="zoom:67%;"></li>
-</ul></li>
-<li><strong>控制类：表示系统在运行过程中的业务控制逻辑</strong>
-<ul>
+</ul>
+</li>
+<li><strong>控制类：表示系统在运行过程中的业务控制逻辑</strong><ul>
 <li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211225001026506.png" alt="image-20211225001026506" style="zoom:67%;"><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211225002544709.png" alt="image-20211225002544709" style="zoom:67%;"></li>
 <li>用例所具有的<strong>事件流的控制行为</strong>， 本身并不处理具体的任务，而是<strong>调度其他类</strong>来完成具体的任务</li>
 <li>实现了<strong>对用例行为的封装</strong>，将用例的执行逻辑与边界和实体进行隔离，使得边界类和实体类具有较好的通用性</li>
 <li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211225002733461.png" alt="image-20211225002733461" style="zoom:67%;"></li>
-</ul></li>
-</ul></li>
 </ul>
-<p><strong><em><u>三种分析类多对多的关联关系</u></em></strong></p>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211225003218988.png" alt="image-20211225003218988" style="zoom:67%;"></p>
-<p><u><strong><em>Step 1：识别分析类</em></strong></u></p>
+</li>
+</ul>
+</li>
+</ul>
+<p><em><strong><u>三种分析类多对多的关联关系</u></strong></em></p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211225003218988.png" alt="image-20211225003218988" style="zoom:67%;">
+
+
+
+<p><u><em><strong>Step 1：识别分析类</strong></em></u></p>
 <p>方法：重用和修改现有的模型，使用分类列表（不同领域不同的分类列表），对用例文本进行“语法分析”（名词/名词短语，动词映射为类的操作、形容词/名词映射为类的属性）</p>
 <ul>
-<li><strong><em>边界类：</em></strong>
-<ul>
+<li><em><strong>边界类：</strong></em><ul>
 <li>一个参与者与一个用例之间的交互或通信关联对应一个边界类</li>
-<li>一般是<strong><em>界面、接口</em></strong></li>
+<li>一般是<em><strong>界面、接口</strong></em></li>
 <li>关注于<strong>参与者与用例之间交互</strong>的信息或者响应的事件，不要描述界面组成元素</li>
 <li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211226235519779.png" alt="image-20211226235519779" style="zoom:67%;"></li>
-</ul></li>
-<li><strong><em>控制类：</em></strong>
-<ul>
+</ul>
+</li>
+<li><em><strong>控制类：</strong></em><ul>
 <li><strong>协调边界类和实体类</strong>，通常在现实世界中没有对应的事物</li>
 <li>负责接收边界类的信息，并将其分发给实体类</li>
 <li>一般来说，一个用例对应一个控制类（但是一个用例可以有多个控制类，如分支事件流情况下；有的情况没必要使用控制类；有些用例可以使用一个控制类）</li>
 <li><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211227000027795.png" alt="image-20211227000027795" style="zoom:67%;"></li>
-</ul></li>
-<li><strong><em>实体类：</em></strong>
-<ul>
+</ul>
+</li>
+<li><em><strong>实体类：</strong></em><ul>
 <li>名词驱动的识别方法</li>
 <li><strong>对用例文本进行“语法分析”（名词/名词短语，动词映射为类的操作、形容词/名词映射为类的属性）</strong></li>
-<li><strong><em>角色actor不一定是实体类。</em></strong> 除非系统需要在各用例中<strong>管理和维护该角色的信息</strong>(不是指ID和密码)，否则只需将其作为actor，无需作为实体类。</li>
-</ul></li>
+<li><em><strong>角色actor不一定是实体类。</strong></em> 除非系统需要在各用例中<strong>管理和维护该角色的信息</strong>(不是指ID和密码)，否则只需将其作为actor，无需作为实体类。</li>
 </ul>
-<p><u><strong><em>Step 2：描述分析类的属性</em></strong></u></p>
+</li>
+</ul>
+<p><u><em><strong>Step 2：描述分析类的属性</strong></em></u></p>
 <ul>
-<li><strong><em>边界类：</em></strong>
-<ul>
+<li><em><strong>边界类：</strong></em><ul>
 <li>UI类型的边界类：actor输入数据、系统反馈数据、临时数据</li>
 <li>API类型的边界类：内外部系统（软件/硬件）传递、接收数据</li>
-</ul></li>
-<li><strong><em>控制类：</em></strong>从UI接收数据、事件流执行临时数据、调用实体类、发送给UI的数据</li>
-<li><strong><em>实体类：</em></strong>基本属性、状态属性、关联属性、派生属性（计算其他属性值得到的新属性）</li>
 </ul>
-<p><u><strong><em>Step 3：定义分析类的操作</em></strong></u></p>
+</li>
+<li><em><strong>控制类：</strong></em>从UI接收数据、事件流执行临时数据、调用实体类、发送给UI的数据</li>
+<li><em><strong>实体类：</strong></em>基本属性、状态属性、关联属性、派生属性（计算其他属性值得到的新属性）</li>
+</ul>
+<p><u><em><strong>Step 3：定义分析类的操作</strong></em></u></p>
 <ul>
-<li><strong><em>边界类的操作</em></strong>
-<ul>
-<li>提供给用户的（actor自己做的动作都是边界类的操作）、可在UI上进行的各类操作
-<ul>
+<li><em><strong>边界类的操作</strong></em><ul>
+<li>提供给用户的（actor自己做的动作都是边界类的操作）、可在UI上进行的各类操作<ul>
 <li>actor发出的每个动作，通常都比较大，需要仔细分析对应于实体类的哪些属性做CRUD</li>
-</ul></li>
+</ul>
+</li>
 <li>对从控制类返回的数据进行各类临时处理而进行的操作</li>
 <li>提供给其他系统的API</li>
-</ul></li>
-<li><strong><em>控制类的操作</em></strong>
-<ul>
+</ul>
+</li>
+<li><em><strong>控制类的操作</strong></em><ul>
 <li>对从边界类接收到的数据进行各类临时处理而进行的操作</li>
 <li>向<strong>实体类</strong>发出的<strong>调用操作</strong></li>
 <li>对从实体类接收到的数据进行<strong>临时处理</strong>而进行的操作</li>
-</ul></li>
-<li><strong><em>实体类的操作</em></strong>
-<ul>
+</ul>
+</li>
+<li><em><strong>实体类的操作</strong></em><ul>
 <li>对<strong>实体内部的属性</strong>进行<strong>CRUD操作（create、read、update、delete）</strong></li>
 <li>对状态进行更新的操作</li>
 <li>辅助操作</li>
-</ul></li>
 </ul>
-<p><u><strong><em>Step 4：建立类之间的关系</em></strong></u></p>
-<p><strong><em>泛化、关联、组合、聚合、依赖</em></strong></p>
-<p><u><strong><em>Step 5：绘制类图</em></strong></u></p>
+</li>
+</ul>
+<p><u><em><strong>Step 4：建立类之间的关系</strong></em></u></p>
+<p><em><strong>泛化、关联、组合、聚合、依赖</strong></em></p>
+<p><u><em><strong>Step 5：绘制类图</strong></em></u></p>
 <ul>
 <li><p><strong>分析类图：</strong>描述各<strong>边界类、实体类、控制类之间的关联关系</strong>，无需刻画属性与操作集</p>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211227000822929.png" alt="image-20211227000822929" style="zoom:67%;"></p></li>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211227000822929.png" alt="image-20211227000822929" style="zoom:67%;"></li>
 <li><p><strong>领域类图：</strong>可以不包含边界类与控制类，<strong>侧重描述各实体类之间的五种关系</strong>，需要给出详细的<strong>属性与操作</strong>集合</p>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211227000834850.png" alt="image-20211227000834850" style="zoom:80%;"></p></li>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211227000834850.png" alt="image-20211227000834850" style="zoom:80%;"></li>
 </ul>
-<h2 id="三.-建立动态行为模型">三. 建立动态行为模型</h2>
-<p><strong><em>时序图/顺序图（Sequence Diagram）</em></strong></p>
-<p><strong><em>协作图（Collaboration Diagram）</em></strong></p>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211227193731449.png" alt="image-20211227193731449" style="zoom:80%;"></p>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211227193739902.png" alt="image-20211227193739902" style="zoom:80%;"></p>
+<h2 id="三-建立动态行为模型"><a href="#三-建立动态行为模型" class="headerlink" title="三. 建立动态行为模型"></a>三. 建立动态行为模型</h2><p><em><strong>时序图/顺序图（Sequence Diagram）</strong></em></p>
+<p><em><strong>协作图（Collaboration Diagram）</strong></em></p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211227193731449.png" alt="image-20211227193731449" style="zoom:80%;">
+
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211227193739902.png" alt="image-20211227193739902" style="zoom:80%;">
+
 <p>一张时序图从左到右应该是：actor（用户）、边界类、控制类、实体类、actor（外部系统）</p>
-<figure>
-<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211227193933515.png" alt="image-20211227193933515"><figcaption aria-hidden="true">image-20211227193933515</figcaption>
-</figure>
-<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211227193955189.png" alt="image-20211227193955189" style="zoom:80%;"></p>
-<h2 id="四.-案例分析">四. 案例分析</h2>
-<p><strong><em><u>仔细看</u></em></strong></p>
-</article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/2022/01/02/Software%20Process%20and%20Tools/09%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/" title="软件过程与工具——结构化设计"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: 软件过程与工具——结构化设计</span></a><a class="button is-default" href="/2022/01/01/Software%20Process%20and%20Tools/07UML%E5%8F%8A%E5%BB%BA%E6%A8%A1%E5%B7%A5%E5%85%B7/" title="软件过程与工具——UML及建模工具"><span class="has-text-weight-semibold">Next: 软件过程与工具——UML及建模工具</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="Haojen/Claudia-theme-blog" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com//"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/FuLucas"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com//"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com//"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright ©</span><span> FuLucas 2022</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/post.js"></script></body></html>
+<p><img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211227193933515.png" alt="image-20211227193933515"></p>
+<img src="https://gitee.com/ifu18/blog-image/raw/master/2022/image-20211227193955189.png" alt="image-20211227193955189" style="zoom:80%;">
+
+
+
+<h2 id="四-案例分析"><a href="#四-案例分析" class="headerlink" title="四. 案例分析"></a>四. 案例分析</h2><p><em><strong><u>仔细看</u></strong></em></p>
+</article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/2022/01/02/Software%20Process%20and%20Tools/09%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/" title="软件过程与工具——结构化设计"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: 软件过程与工具——结构化设计</span></a><a class="button is-default" href="/2022/01/01/Software%20Process%20and%20Tools/06%E8%BD%AF%E4%BB%B6%E6%BC%94%E5%8C%96%E4%B8%8E%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/" title="软件过程与工具——软件演化与配置管理"><span class="has-text-weight-semibold">Next: 软件过程与工具——软件演化与配置管理</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="Haojen/Claudia-theme-blog" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com//"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/FuLucas"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com//"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com//"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright ©</span><span> FuLucas 2022</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/post.js"></script></body></html>
