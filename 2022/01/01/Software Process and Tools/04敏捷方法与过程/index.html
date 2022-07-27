@@ -1,7 +1,8 @@
 <!DOCTYPE html><html class="appearance-auto" lang="en"><head><meta charset="UTF-8"><title>软件过程与工具——敏捷方法与过程</title><meta name="description" content="Shifting eyes and vacancy coming."><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
-<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="敏捷方法与过程一. 敏捷过程模型变化无处不在，难以预测变化何时发生，要在每一项开发活动中贯穿变化的意识
+<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="敏捷方法与过程
+一. 敏捷过程模型
+变化无处不在，难以预测变化何时发生，要在每一项开发活动中贯穿变化的意识
 《敏捷软件开发宣言》
-
 
 总结：小步快跑，及时反馈
 本质：以快速的增量和迭代的方式进行软件开发
@@ -13,20 +14,18 @@
 不看重形式和工具，看重人和内容，保持简洁
 
 
-
 敏捷开发前期开发成本比传统开发过程高，而后期成本要比传统开发过程低
 敏捷过程中最重要的因素：人
 （这里的人应该指的是开发者和客户）
 
-
-
-
 目前广泛使用敏捷开发方法论
 略，包括极限编程和Scrum，XP是Scrum的基础
 二. 极限编程（XP）
+
 极限：把事情做到极致
+
 了解客户需求  客户时时刻刻都在身边，时时了解需求
-测试/单元测试提高质量  TD.."><meta name="generator" content="Hexo 6.0.0"><style>mjx-container[jax="SVG"] {
+测试/单元测试提高质量  TDD.."><meta name="generator" content="Hexo 6.0.0"><style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
 
@@ -140,12 +139,13 @@ mjx-container[display="true"] + br {
 }
 </style>
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">FuLucas's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">软件过程与工具——敏捷方法与过程</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%8F%E6%8D%B7%E6%96%B9%E6%B3%95%E4%B8%8E%E8%BF%87%E7%A8%8B"><span class="toc-text">敏捷方法与过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E6%95%8F%E6%8D%B7%E8%BF%87%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="toc-text">一. 敏捷过程模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E6%9E%81%E9%99%90%E7%BC%96%E7%A8%8B%EF%BC%88XP%EF%BC%89"><span class="toc-text">二. 极限编程（XP）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-XP-Planning-%E8%AE%A1%E5%88%92%E9%98%B6%E6%AE%B5"><span class="toc-text">1. XP Planning 计划阶段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-XP-Design-%E8%AE%BE%E8%AE%A1%E9%98%B6%E6%AE%B5"><span class="toc-text">2. XP Design 设计阶段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-XP-Coding-and-Testing-%E7%BC%96%E7%A0%81%E4%B8%8E%E6%B5%8B%E8%AF%95%E9%98%B6%E6%AE%B5"><span class="toc-text">3. XP Coding and Testing 编码与测试阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-XP-Coding"><span class="toc-text">3.1 XP Coding</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-XP-Testing"><span class="toc-text">3.2 XP Testing</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Pair-Programming-%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B"><span class="toc-text">4. Pair Programming 结对编程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-Scrum"><span class="toc-text">三. Scrum</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E6%A8%A1%E5%9E%8B%E5%AF%B9%E6%AF%94"><span class="toc-text">四. 与传统开发过程模型对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94-%E6%95%8F%E6%8D%B7%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90"><span class="toc-text">五. 敏捷案例分析</span></a></li></ol></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/HIT-Software-Process-and-Tools"><i class="tag post-item-tag">HIT-Software-Process-and-Tools</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">软件过程与工具——敏捷方法与过程</h1><time class="has-text-grey" datetime="2022-01-01T12:38:38.000Z">2022-01-01</time><article class="mt-2 post-content"><h1 id="敏捷方法与过程"><a href="#敏捷方法与过程" class="headerlink" title="敏捷方法与过程"></a>敏捷方法与过程</h1><h2 id="一-敏捷过程模型"><a href="#一-敏捷过程模型" class="headerlink" title="一. 敏捷过程模型"></a>一. 敏捷过程模型</h2><p><em><strong><u>变化无处不在，难以预测变化何时发生，要在每一项开发活动中贯穿变化的意识</u></strong></em></p>
-<p><em><strong>《敏捷软件开发宣言》</strong></em></p>
-<img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220210615264.png" alt="image-20211220210615264" style="zoom:67%;">
-
-<p><em><strong>总结：小步快跑，及时反馈</strong></em></p>
-<p><em><strong><u>本质：以快速的增量和迭代的方式进行软件开发</u></strong></em></p>
+</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">FuLucas's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">软件过程与工具——敏捷方法与过程</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%8F%E6%8D%B7%E6%96%B9%E6%B3%95%E4%B8%8E%E8%BF%87%E7%A8%8B"><span class="toc-text">敏捷方法与过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80.-%E6%95%8F%E6%8D%B7%E8%BF%87%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="toc-text">一. 敏捷过程模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C.-%E6%9E%81%E9%99%90%E7%BC%96%E7%A8%8Bxp"><span class="toc-text">二. 极限编程（XP）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#xp-planning-%E8%AE%A1%E5%88%92%E9%98%B6%E6%AE%B5"><span class="toc-text">1. XP Planning 计划阶段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#xp-design-%E8%AE%BE%E8%AE%A1%E9%98%B6%E6%AE%B5"><span class="toc-text">2. XP Design 设计阶段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#xp-coding-and-testing-%E7%BC%96%E7%A0%81%E4%B8%8E%E6%B5%8B%E8%AF%95%E9%98%B6%E6%AE%B5"><span class="toc-text">3. XP Coding and Testing 编码与测试阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#xp-coding"><span class="toc-text">3.1 XP Coding</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#xp-testing"><span class="toc-text">3.2 XP Testing</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pair-programming-%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B"><span class="toc-text">4. Pair Programming 结对编程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89.-scrum"><span class="toc-text">三. Scrum</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B.-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E6%A8%A1%E5%9E%8B%E5%AF%B9%E6%AF%94"><span class="toc-text">四. 与传统开发过程模型对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94.-%E6%95%8F%E6%8D%B7%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90"><span class="toc-text">五. 敏捷案例分析</span></a></li></ol></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/HIT-Software-Process-and-Tools"><i class="tag post-item-tag">HIT-Software-Process-and-Tools</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">软件过程与工具——敏捷方法与过程</h1><time class="has-text-grey" datetime="2022-01-01T12:38:38.000Z">2022-01-01</time><article class="mt-2 post-content"><h1 id="敏捷方法与过程">敏捷方法与过程</h1>
+<h2 id="一.-敏捷过程模型">一. 敏捷过程模型</h2>
+<p><strong><em><u>变化无处不在，难以预测变化何时发生，要在每一项开发活动中贯穿变化的意识</u></em></strong></p>
+<p><strong><em>《敏捷软件开发宣言》</em></strong></p>
+<p><img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220210615264.png" alt="image-20211220210615264" style="zoom:67%;"></p>
+<p><strong><em>总结：小步快跑，及时反馈</em></strong></p>
+<p><strong><em><u>本质：以快速的增量和迭代的方式进行软件开发</u></em></strong></p>
 <ul>
 <li><strong>不强调文档</strong>而强调<strong>可运行软件</strong>片段</li>
 <li>开发者与客户频繁<strong>沟通</strong></li>
@@ -153,31 +153,27 @@ mjx-container[display="true"] + br {
 <li>持续不断的<strong>短周期迭代</strong></li>
 <li>不看重形式和工具，看重人和内容，保持简洁</li>
 </ul>
-<img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220211147830.png" alt="image-20211220211147830" style="zoom:67%;">
-
+<p><img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220211147830.png" alt="image-20211220211147830" style="zoom:67%;"></p>
 <p>敏捷开发前期开发成本比传统开发过程高，而后期成本要比传统开发过程低</p>
-<p><em><strong><u>敏捷过程中最重要的因素：人</u></strong></em></p>
+<p><strong><em><u>敏捷过程中最重要的因素：人</u></em></strong></p>
 <p>（这里的人应该指的是开发者和客户）</p>
-<img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220211654269.png" alt="image-20211220211654269" style="zoom:67%;">
-
-
-
-<p><em><strong>目前广泛使用敏捷开发方法论</strong></em></p>
+<p><img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220211654269.png" alt="image-20211220211654269" style="zoom:67%;"></p>
+<p><strong><em>目前广泛使用敏捷开发方法论</em></strong></p>
 <p>略，包括极限编程和Scrum，XP是Scrum的基础</p>
-<h2 id="二-极限编程（XP）"><a href="#二-极限编程（XP）" class="headerlink" title="二. 极限编程（XP）"></a>二. 极限编程（XP）</h2><ul>
-<li><em><strong>极限：把事情做到极致</strong></em><ul>
-<li>了解客户需求 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.054ex" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.242ex" role="img" focusable="false" viewBox="0 -525 1000 549"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="21D2" d="M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z"></path></g></g></g></svg></mjx-container> 客户时时刻刻都在身边，时时了解需求</li>
-<li>测试/单元测试提高质量 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.054ex" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.242ex" role="img" focusable="false" viewBox="0 -525 1000 549"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="21D2" d="M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z"></path></g></g></g></svg></mjx-container> TDD（先写测试，测试驱动开发）</li>
-<li>代码复审找到错误 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.054ex" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.242ex" role="img" focusable="false" viewBox="0 -525 1000 549"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="21D2" d="M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z"></path></g></g></g></svg></mjx-container> 一开始就处于“复审状态”，即结对编程</li>
-<li>变化块 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.054ex" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.242ex" role="img" focusable="false" viewBox="0 -525 1000 549"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="21D2" d="M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z"></path></g></g></g></svg></mjx-container> 频繁增量开发，重构和频繁发布</li>
+<h2 id="二.-极限编程xp">二. 极限编程（XP）</h2>
+<ul>
+<li><strong><em>极限：把事情做到极致</em></strong>
+<ul>
+<li>了解客户需求 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.054ex" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.242ex" role="img" focusable="false" viewBox="0 -525 1000 549"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="21D2" d="M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z"></path></g></g></g></svg></mjx-container></span> 客户时时刻刻都在身边，时时了解需求</li>
+<li>测试/单元测试提高质量 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.054ex" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.242ex" role="img" focusable="false" viewBox="0 -525 1000 549"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="21D2" d="M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z"></path></g></g></g></svg></mjx-container></span> TDD（先写测试，测试驱动开发）</li>
+<li>代码复审找到错误 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.054ex" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.242ex" role="img" focusable="false" viewBox="0 -525 1000 549"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="21D2" d="M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z"></path></g></g></g></svg></mjx-container></span> 一开始就处于“复审状态”，即结对编程</li>
+<li>变化块 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.054ex" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.242ex" role="img" focusable="false" viewBox="0 -525 1000 549"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="21D2" d="M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z"></path></g></g></g></svg></mjx-container></span> 频繁增量开发，重构和频繁发布</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220213551697.png" alt="image-20211220213551697" style="zoom:80%;">
-
-<img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220213556594.png" alt="image-20211220213556594" style="zoom:80%;">
-
-<h3 id="1-XP-Planning-计划阶段"><a href="#1-XP-Planning-计划阶段" class="headerlink" title="1. XP Planning 计划阶段"></a>1. XP Planning 计划阶段</h3><p><em><strong><u>用户故事、权值（价值和风险）、验收测试准则、迭代计划</u></strong></em></p>
+<p><img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220213551697.png" alt="image-20211220213551697" style="zoom:80%;"></p>
+<p><img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220213556594.png" alt="image-20211220213556594" style="zoom:80%;"></p>
+<h3 id="xp-planning-计划阶段">1. XP Planning 计划阶段</h3>
+<p><strong><em><u>用户故事、权值（价值和风险）、验收测试准则、迭代计划</u></em></strong></p>
 <ul>
 <li><strong>用户故事</strong>：描述输出、特性、功能等</li>
 <li>客户指定<strong>用户故事优先级</strong>：按照<strong>价值或风险</strong>评估</li>
@@ -186,35 +182,37 @@ mjx-container[display="true"] + br {
 <li>规划<strong>整体进度</strong></li>
 <li>开发过程增删改拆用户故事</li>
 </ul>
-<h3 id="2-XP-Design-设计阶段"><a href="#2-XP-Design-设计阶段" class="headerlink" title="2. XP Design 设计阶段"></a>2. XP Design 设计阶段</h3><ul>
+<h3 id="xp-design-设计阶段">2. XP Design 设计阶段</h3>
+<ul>
 <li><strong>KIS原则（Keep It Simple）</strong></li>
 <li><strong>CRC卡片（Class Responsibility Collaborator）</strong></li>
 <li><strong>Spike Solutions 原型</strong>（刺探性的解决方案，问题拿不准做实验尝试）</li>
 <li>设计方案不断<strong>重构</strong></li>
 </ul>
-<h3 id="3-XP-Coding-and-Testing-编码与测试阶段"><a href="#3-XP-Coding-and-Testing-编码与测试阶段" class="headerlink" title="3. XP Coding and Testing 编码与测试阶段"></a>3. XP Coding and Testing 编码与测试阶段</h3><h4 id="3-1-XP-Coding"><a href="#3-1-XP-Coding" class="headerlink" title="3.1 XP Coding"></a>3.1 XP Coding</h4><p>***<u>结对编程</u>***：两个人一起编程、实时讨论评审</p>
-<p>***<u>TDD（测试驱动的开发）</u><em><strong>：先写测试用例（</strong>单元测试用例</em>*），再写代码；</p>
-<h4 id="3-2-XP-Testing"><a href="#3-2-XP-Testing" class="headerlink" title="3.2 XP Testing"></a>3.2 XP Testing</h4><p>自动化单元测试、集成测试、持续进行回归测试、验收测试（见10章）</p>
+<h3 id="xp-coding-and-testing-编码与测试阶段">3. XP Coding and Testing 编码与测试阶段</h3>
+<h4 id="xp-coding">3.1 XP Coding</h4>
+<p><strong><em><u>结对编程</u></em></strong>：两个人一起编程、实时讨论评审</p>
+<p><strong><em><u>TDD（测试驱动的开发）</u></em></strong>：先写测试用例（<strong>单元测试用例</strong>），再写代码；</p>
+<h4 id="xp-testing">3.2 XP Testing</h4>
+<p>自动化单元测试、集成测试、持续进行回归测试、验收测试（见10章）</p>
 <p>验收与用户故事是否相符</p>
-<h3 id="4-Pair-Programming-结对编程"><a href="#4-Pair-Programming-结对编程" class="headerlink" title="4. Pair Programming 结对编程"></a>4. Pair Programming 结对编程</h3><p>驾驶员，领航员</p>
+<h3 id="pair-programming-结对编程">4. Pair Programming 结对编程</h3>
+<p>驾驶员，领航员</p>
 <p>双方只有水平上的差距，没有级别上的差异（平等的决策权）</p>
 <p>质量取决于一对程序员中各方面水平较高的那一位</p>
-<h2 id="三-Scrum"><a href="#三-Scrum" class="headerlink" title="三. Scrum"></a>三. Scrum</h2><img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220221838041.png" alt="image-20211220221838041" style="zoom:80%;">
-
-
-
-<p><em><strong><u>Scrum的六项活动</u></strong></em></p>
-<img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220222052966.png" alt="image-20211220222052966" style="zoom:80%;">
-
-
-
-<p><img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220222504943.png" alt="image-20211220222504943"></p>
+<h2 id="三.-scrum">三. Scrum</h2>
+<p><img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220221838041.png" alt="image-20211220221838041" style="zoom:80%;"></p>
+<p><strong><em><u>Scrum的六项活动</u></em></strong></p>
+<p><img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220222052966.png" alt="image-20211220222052966" style="zoom:80%;"></p>
+<figure>
+<img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220222504943.png" alt="image-20211220222504943"><figcaption aria-hidden="true">image-20211220222504943</figcaption>
+</figure>
 <ul>
 <li>Product Owner：确定产品功能，<strong>维护Product Backlog</strong>、deadline、priority、ROI（投资回报率），验收结果</li>
 <li>Scrum Master（Strum Team Leader）：保证开发过程按计划进行；<strong>组织</strong>会议：<strong>每日站会、Sprint计划会议、完成工作后的Sprint评审会议和Sprint回顾会议</strong>；通过外在/内在协调，确保团队资源完全可被利用并且全部是高产出的</li>
 <li>Team（Scrum团队）：在每个Sprint中将<strong>Product Backlog中的条目转化</strong>成为潜在可交付的功能增量（可以认为是<strong>Sprint Backlog</strong>）；规模在<strong>4-7</strong>人；具备交付产品增量所需要的各种技能</li>
 </ul>
-<p><em><strong><u>每日站会</u></strong></em></p>
+<p><strong><em><u>每日站会</u></em></strong></p>
 <ul>
 <li>团队成员站着开会——短时间（15分钟。每人不超过三分钟）内高效讨论问题，保持注意力集中</li>
 <li>每个人向同伴报告进度：<strong>我昨天做了什么、我今天要做什么、我碰到了哪些问题</strong></li>
@@ -222,12 +220,14 @@ mjx-container[display="true"] + br {
 </ul>
 <p><strong>Sprint Burndown Chart 燃尽图</strong></p>
 <p><strong>Task Board 任务墙</strong>（parking 表示任务堆积）</p>
-<img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220224416747.png" alt="image-20211220224416747" style="zoom:80%;">
-
-<h2 id="四-与传统开发过程模型对比"><a href="#四-与传统开发过程模型对比" class="headerlink" title="四. 与传统开发过程模型对比"></a>四. 与传统开发过程模型对比</h2><img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220224432368.png" alt="image-20211220224432368" style="zoom:80%;">
-
-<p><img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220224507774.png" alt="image-20211220224507774"></p>
-<h2 id="五-敏捷案例分析"><a href="#五-敏捷案例分析" class="headerlink" title="五. 敏捷案例分析"></a>五. 敏捷案例分析</h2><p>客户对功能需求还不明确</p>
+<p><img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220224416747.png" alt="image-20211220224416747" style="zoom:80%;"></p>
+<h2 id="四.-与传统开发过程模型对比">四. 与传统开发过程模型对比</h2>
+<p><img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220224432368.png" alt="image-20211220224432368" style="zoom:80%;"></p>
+<figure>
+<img src="https://raw.githubusercontent.com/FuLucas/image/main/2022/image-20211220224507774.png" alt="image-20211220224507774"><figcaption aria-hidden="true">image-20211220224507774</figcaption>
+</figure>
+<h2 id="五.-敏捷案例分析">五. 敏捷案例分析</h2>
+<p>客户对功能需求还不明确</p>
 <p>需要快速推出抢占市场</p>
 <p>适合敏捷过程的项目</p>
 <p>敏捷方法希望快速交付可用的软件，实现软件的快速交付是通过<strong>迭代</strong>来完成</p>
